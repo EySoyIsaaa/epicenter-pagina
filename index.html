@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EpicenterDSP Player — Procesador de restauración de bajos | Android · iOS</title>
+  <meta name="description" content="EpicenterDSP Player es un reproductor con motor DSP en tiempo real que restaura y reconstruye los bajos profundos. Heredero del bass restoration del car audio. Lite gratis y Full en Google Play." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="EpicenterDSP Player — Bass Restored. Sound Elevated." />
+  <meta property="og:description" content="Motor DSP de restauración de bajos en tiempo real. Lite gratis · Full completa. Android hoy, iOS muy pronto." />
+  <!-- PLACEHOLDER: dominio real + imagen social 1200x630 -->
+  <meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPO/" />
+  <meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPO/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <noscript><style>.preloader{display:none}</style></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "EpicenterDSP Player",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "MultimediaApplication",
+    "description": "Reproductor con motor DSP en tiempo real de restauración de bajos (bass restoration).",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <script>document.body.classList.add("preloading");</script>
+
+  <!-- ================= PRELOADER ================= -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="pre-core">
+      <img class="pre-logo" src="assets/logo.svg" alt="EpicenterDSP Player" />
+      <div class="pre-bar"><i></i></div>
+    </div>
+  </div>
+
+  <div class="bg-fx" aria-hidden="true"></div>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand" aria-label="EpicenterDSP Player — inicio">
+        <img class="brand-mark" src="assets/mark.svg" alt="EpicenterDSP Player" />
+        <span class="brand-word">EPICENTER <em>DSP</em></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#heritage">Herencia</a>
+        <a href="#features">Motor</a>
+        <a href="#versions">Lite vs Full</a>
+        <a href="#screens">La app</a>
+        <a href="#faq">FAQ</a>
+        <a href="support/">Soporte</a>
+        <a href="#download" class="btn">Descargar</a>
+      </nav>
+      <button class="nav-burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="hero-badge reveal"><span class="dot"></span> Bass Restoration Processor · v7.0</span>
+          <h1 class="reveal" style="--d:.08s">Restaura el bajo.<br /><span class="grad-txt">No solo lo subas.</span></h1>
+          <p class="hero-lead reveal" style="--d:.16s">
+            EpicenterDSP Player es un reproductor con un motor DSP en tiempo real que reconstruye
+            las frecuencias graves que la compresión y el streaming aplastan. La filosofía del
+            bass restoration del car audio profesional, ahora en tu teléfono.
+          </p>
+          <div class="store-btns reveal" style="--d:.24s">
+            <a class="store-btn" data-link="playlite" href="https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite" rel="noopener">
+              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <span class="st"><small>Gratis · Google Play</small><strong>Descargar Lite</strong></span>
+            </a>
+            <a class="store-btn primary" data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener">
+              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <span class="st"><small>Versión completa</small><strong>Obtener Full</strong></span>
+            </a>
+            <a class="store-btn" data-link="appstore" href="#" rel="noopener">
+              <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="st"><small>App Store</small><strong>Próximamente</strong></span>
+            </a>
+          </div>
+          <p class="hero-note reveal" style="--d:.3s"><strong>Lite es gratis</strong> y el efecto Epicenter no tiene límites de uso. <strong>Full</strong> desbloquea todo el motor.</p>
+          <ul class="spec-list reveal" style="--d:.36s">
+            <li><span class="v">5</span><span class="k">Controles Epicenter</span></li>
+            <li><span class="v">31</span><span class="k">Bandas de EQ · Full</span></li>
+            <li><span class="v"><em>∞</em></span><span class="k">Uso del efecto</span></li>
+          </ul>
+          <div class="hires-row reveal" style="--d:.44s">
+            <img src="assets/hires-audio.svg" alt="Hi-Res Audio" class="hires-badge" />
+            <span>Compatible con reproducción de audio en alta resolución</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" style="--d:.2s">
+          <div class="phone" id="heroPhone">
+            <div class="phone-glow" aria-hidden="true"></div>
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="slot">
+                  <img src="assets/screenshots/player.png" alt="EpicenterDSP Player — reproductor" onerror="this.remove()" />
+                </div>
+                <div class="slot-ph" aria-hidden="true">
+                  <div class="knob"><span class="knob-arc"></span></div>
+                  <b>player.png</b>
+                  <small>Captura del reproductor</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SPEC BAR ================= -->
+    <div class="specbar">
+      <div class="wrap specbar-grid">
+        <div><div class="v">TIEMPO REAL</div><div class="k">Motor DSP</div></div>
+        <div><div class="v">5 <em>·</em> Epicenter</div><div class="k">Sweep · Width · Intensity · Balance · Volume</div></div>
+        <div><div class="v">31 <em>bandas</em></div><div class="k">Ecualizador · Full</div></div>
+        <div><div class="v">±8 <em>dB</em></div><div class="k">Rango de EQ · Full</div></div>
+        <div><div class="v">Auto <em>·</em> IA</div><div class="k">Auto-EQ / Auto-Epicenter · Full</div></div>
+      </div>
+    </div>
+
+    <!-- ================= HERENCIA ================= -->
+    <section class="heritage" id="heritage">
+      <div class="wrap heritage-grid">
+        <div class="reveal">
+          <!-- Faceplate decorativo (arte de marca, homenaje al procesador físico) -->
+          <div class="rack" aria-hidden="true">
+            <div class="rack-top">
+              <div class="rack-brand">EPICENTER <em>DSP</em></div>
+              <div class="rack-model">BASS RESTORATION · DSP-7</div>
+            </div>
+            <div class="rack-body">
+              <div class="rack-knob">
+                <div class="knob"></div>
+                <div class="rack-ticks">
+                  <span class="on" style="transform:translate(-50%,-50%) rotate(-125deg)"></span>
+                  <span class="on" style="transform:translate(-50%,-50%) rotate(-95deg)"></span>
+                  <span class="on" style="transform:translate(-50%,-50%) rotate(-65deg)"></span>
+                  <span class="on" style="transform:translate(-50%,-50%) rotate(-35deg)"></span>
+                  <span style="transform:translate(-50%,-50%) rotate(-5deg)"></span>
+                  <span style="transform:translate(-50%,-50%) rotate(25deg)"></span>
+                  <span style="transform:translate(-50%,-50%) rotate(55deg)"></span>
+                  <span style="transform:translate(-50%,-50%) rotate(85deg)"></span>
+                  <span style="transform:translate(-50%,-50%) rotate(115deg)"></span>
+                </div>
+              </div>
+              <div class="rack-readout">
+                <div class="lbl">Restoration</div>
+                <div class="big">+8 <span style="font-size:1rem;color:var(--dim)">dB</span></div>
+                <div class="rack-leds"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+                <div class="lbl" style="margin-top:6px">Sub · 20–60 Hz</div>
+              </div>
+            </div>
+            <div class="rack-slots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <div class="heritage-copy reveal" style="--d:.1s">
+          <span class="eyebrow"><span class="idx">01 —</span> Herencia</span>
+          <h2>Del rack del auto <span class="grad-txt">a tu bolsillo.</span></h2>
+          <p>El <span class="pull">bass restoration</span> no es un truco nuevo. Nació en el car audio profesional, con procesadores dedicados —una sola perilla— capaces de reconstruir las octavas más graves que la radio, el streaming y la compresión aplastan.</p>
+          <p>EpicenterDSP toma ese mismo principio —<span class="pull">restaurar, no solo subirle el volumen al bajo</span>— y lo convierte en un motor DSP que trabaja en tiempo real dentro de tu teléfono. Mismo carácter, misma pegada, sin instalar nada en la cajuela.</p>
+          <p>Es la diferencia entre un ecualizador que empuja frecuencias a ciegas y un motor que reconstruye el sub-bajo relacionado con la señal original de cada canción.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MOTOR / FUNCIONES ================= -->
+    <section id="features">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow"><span class="idx">02 —</span> El motor</span>
+          <h2>Un rack DSP completo, <span class="grad-txt">no una barra de bass.</span></h2>
+          <p>Cada control existe por una razón. Esto es lo que hay dentro de EpicenterDSP Player.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature reveal">
+            <span class="fnum">01</span>
+            <div class="ficon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+            <h3>Motor Epicenter</h3>
+            <p>Restauración de bajos con 5 controles reales: Sweep, Width, Intensity, Balance y Volume. Sin límites de uso, también en Lite.</p>
+          </div>
+          <div class="feature reveal" style="--d:.06s">
+            <span class="fnum">02</span>
+            <div class="ficon"><svg viewBox="0 0 24 24"><path d="M3 12h3l3-8 4 16 3-8h5"/></svg></div>
+            <h3>DSP en tiempo real</h3>
+            <p>El audio se procesa en vivo mientras suena. Mueves una perilla y escuchas el cambio al instante, sin renderizados.</p>
+          </div>
+          <div class="feature reveal" style="--d:.12s">
+            <span class="fnum">03</span>
+            <div class="ficon"><svg viewBox="0 0 24 24"><path d="M4 20V9M9 20V4M14 20v-7M19 20v-11"/></svg></div>
+            <h3>Ecualizador <span class="tag-full">Full</span></h3>
+            <p>EQ manual de 31 bandas con rango ±8 dB, banda por banda. En Lite tienes 6 presets listos para usar (hasta +2 dB).</p>
+          </div>
+          <div class="feature reveal" style="--d:.18s">
+            <span class="fnum">04</span>
+            <div class="ficon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 8a4 4 0 1 0 4 4"/><path d="M15 3h6v6"/><path d="M21 3l-7 7"/></svg></div>
+            <h3>IA de optimización <span class="tag-full">Full</span></h3>
+            <p>Auto-EQ y Auto-Epicenter analizan cada canción y calibran el motor por ti. Presiona Auto Adjust y listo.</p>
+          </div>
+          <div class="feature reveal" style="--d:.24s">
+            <span class="fnum">05</span>
+            <div class="ficon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M4 12v4a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2zM20 12v4a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>Efectos espaciales <span class="tag-full">Full</span></h3>
+            <p>Reverb estilo Schroeder, Concert Hall y expansión estéreo, afinados para dar profundidad sin ensuciar la mezcla.</p>
+          </div>
+          <div class="feature reveal" style="--d:.3s">
+            <span class="fnum">06</span>
+            <div class="ficon"><svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg></div>
+            <h3>Reproducción HiFi</h3>
+            <p>Motor de reproducción nativo y estable (ExoPlayer) con soporte para audio de alta calidad: lossless, 44.1 kHz y más.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LITE VS FULL ================= -->
+    <section id="versions">
+      <div class="wrap">
+        <div class="sec-head center reveal">
+          <span class="eyebrow"><span class="idx">03 —</span> Versiones</span>
+          <h2>Empieza con Lite. <span class="grad-txt">Sube a Full.</span></h2>
+          <p>La Lite es totalmente funcional para reproducir y usar el Epicenter sin restricciones. La Full quita todos los límites y abre el rack completo.</p>
+        </div>
+
+        <div class="versions-grid">
+          <div class="vcard reveal">
+            <p class="vtier">Versión gratuita</p>
+            <h3>EpicenterDSP Lite</h3>
+            <p class="vprice">Gratis · Google Play</p>
+            <ul class="vlist">
+              <li>Efecto Epicenter <strong>ilimitado</strong> — sin límite de canciones por día</li>
+              <li>Las 5 perillas totalmente ajustables</li>
+              <li>Ecualizador con 6 presets (hasta +2 dB)</li>
+              <li class="muted">Biblioteca de hasta 30 canciones · importación manual</li>
+              <li>Reproducción nativa estable (ExoPlayer)</li>
+            </ul>
+            <a class="btn-ghost" data-link="playlite" href="https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite" rel="noopener">Descargar Lite gratis</a>
+          </div>
+
+          <div class="vcard full reveal" style="--d:.1s">
+            <span class="vflag">Recomendada</span>
+            <p class="vtier">Versión completa</p>
+            <h3>EpicenterDSP Full</h3>
+            <p class="vprice">Compra única · Google Play</p>
+            <ul class="vlist">
+              <li>Biblioteca <strong>ilimitada</strong> con escaneo automático de tu música</li>
+              <li>EQ manual de 31 bandas (±8 dB), banda por banda</li>
+              <li>IA de optimización: Auto-EQ y Auto-Epicenter</li>
+              <li>Efectos pro: Reverb, Concert Hall y sonido espacial</li>
+              <li>Sin ninguna de las limitaciones de la Lite</li>
+            </ul>
+            <a class="btn" data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener">Obtener Full</a>
+          </div>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="cmp">
+            <thead><tr><th>Función</th><th>Lite</th><th>Full</th></tr></thead>
+            <tbody>
+              <tr><td>Reproducción nativa <span class="sub">Motor estable con ExoPlayer</span></td><td><span class="m-yes">✓</span></td><td><span class="m-yes">✓</span></td></tr>
+              <tr><td>Efecto Epicenter <span class="sub">Sweep · Width · Intensity · Balance · Volume</span></td><td><span class="m-full">Ilimitado</span></td><td><span class="m-full">Ilimitado</span></td></tr>
+              <tr><td>Biblioteca <span class="sub">Canciones en tu librería</span></td><td><span class="m-part">Máx. 30</span></td><td><span class="m-full">Ilimitada</span></td></tr>
+              <tr><td>Importar música <span class="sub">Cómo llega tu música a la app</span></td><td><span class="m-part">Manual</span></td><td><span class="m-full">Automática</span></td></tr>
+              <tr><td>Ecualizador <span class="sub">Control de bandas de frecuencia</span></td><td><span class="m-part">6 presets · +2 dB</span></td><td><span class="m-full">31 bandas · ±8 dB</span></td></tr>
+              <tr><td>IA de optimización <span class="sub">Auto-EQ y Auto-Epicenter</span></td><td><span class="m-no">—</span></td><td><span class="m-yes">✓</span></td></tr>
+              <tr><td>Efectos pro <span class="sub">Reverb · Concert Hall · sonido espacial</span></td><td><span class="m-no">—</span></td><td><span class="m-yes">✓</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Lite y Full son apps independientes en Google Play. Consulta cada ficha para el detalle actualizado.</p>
+      </div>
+    </section>
+
+    <!-- ================= CÓMO FUNCIONA ================= -->
+    <section id="how">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow"><span class="idx">04 —</span> Cómo funciona</span>
+          <h2>Sin magia. <span class="grad-txt">Solo señal.</span></h2>
+          <p>Esto es lo que pasa entre presionar play y sentir la diferencia.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><span class="snum">PASO 01</span><h3>Reproduce</h3><p>Carga tu biblioteca y presiona play. El motor vive dentro de la cadena de reproducción.</p></div>
+          <div class="step reveal" style="--d:.06s"><span class="snum">PASO 02</span><h3>Analiza</h3><p>El DSP lee el contenido grave de la pista en tiempo real, siguiendo el bajo que ya existe.</p></div>
+          <div class="step reveal" style="--d:.12s"><span class="snum">PASO 03</span><h3>Restaura</h3><p>Reconstruye y refuerza las frecuencias profundas relacionadas con la señal original.</p></div>
+          <div class="step reveal" style="--d:.18s"><span class="snum">PASO 04</span><h3>Controla</h3><p>Ajusta las 5 perillas a tu equipo — o deja que la IA (Full) calibre todo por ti.</p></div>
+        </div>
+        <div class="honest reveal">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>
+          <div>
+            <h4>Honestidad ante todo</h4>
+            <p>El resultado depende de la canción, la grabación y tu equipo. EpicenterDSP restaura contenido grave relacionado con la señal original — no puede hacer que una bocina reproduzca frecuencias fuera de sus límites físicos, y no vamos a decirte lo contrario.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LA APP (CAPTURAS REALES) ================= -->
+    <section id="screens">
+      <div class="wrap">
+        <div class="sec-head center reveal">
+          <span class="eyebrow"><span class="idx">05 —</span> La app</span>
+          <h2>Interfaz de <span class="grad-txt">instrumento.</span></h2>
+          <p>Perillas, medidores y lectura precisa. La misma app en Android e iOS.</p>
+        </div>
+        <!-- CAPTURAS REALES en assets/screenshots/ -->
+        <div class="shots reveal">
+          <div class="shot"><div class="shot-inner">
+            <div class="slot"><img src="assets/screenshots/player.png" alt="EpicenterDSP — reproductor" loading="lazy" onerror="this.remove()" /></div>
+            <div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>player.png</b><small>Reproductor</small></div>
+          </div></div>
+          <div class="shot"><div class="shot-inner">
+            <div class="slot"><img src="assets/screenshots/epicenter.png" alt="EpicenterDSP — motor Epicenter" loading="lazy" onerror="this.remove()" /></div>
+            <div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>epicenter.png</b><small>Epicenter DSP</small></div>
+          </div></div>
+          <div class="shot"><div class="shot-inner">
+            <div class="slot"><img src="assets/screenshots/eq.png" alt="EpicenterDSP — ecualizador" loading="lazy" onerror="this.remove()" /></div>
+            <div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>eq.png</b><small>Ecualizador</small></div>
+          </div></div>
+          <div class="shot"><div class="shot-inner">
+            <div class="slot"><img src="assets/screenshots/fx.png" alt="EpicenterDSP — efectos espaciales" loading="lazy" onerror="this.remove()" /></div>
+            <div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>fx.png</b><small>Efectos</small></div>
+          </div></div>
+          <div class="shot"><div class="shot-inner">
+            <div class="slot"><img src="assets/screenshots/library.png" alt="EpicenterDSP — biblioteca" loading="lazy" onerror="this.remove()" /></div>
+            <div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>library.png</b><small>Biblioteca</small></div>
+          </div></div>
+          <div class="shot"><div class="shot-inner">
+            <div class="slot"><img src="assets/screenshots/splash.png" alt="EpicenterDSP — inicio" loading="lazy" onerror="this.remove()" /></div>
+            <div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>splash.png</b><small>Inicio</small></div>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PARA QUIÉN ================= -->
+    <section id="who">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow"><span class="idx">06 —</span> Para quién</span>
+          <h2>Para quienes <span class="grad-txt">sienten</span> su música.</h2>
+        </div>
+        <div class="aud-grid">
+          <div class="aud reveal"><div class="aicon"><svg viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/></svg></div><div><h3>Con audífonos</h3><p>Sub-bajos y pegada que la mayoría de los audífonos dejan sobre la mesa.</p></div></div>
+          <div class="aud reveal" style="--d:.06s"><div class="aicon"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><circle cx="12" cy="15" r="3.5"/><circle cx="12" cy="6.5" r="1.2"/></svg></div><div><h3>Bocinas Bluetooth</h3><p>Exprime más cuerpo y bajo percibido de tus bocinas portátiles.</p></div></div>
+          <div class="aud reveal" style="--d:.12s"><div class="aicon"><svg viewBox="0 0 24 24"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11M5 11h14M5 11a2 2 0 0 0-2 2v4h2m14-6a2 2 0 0 1 2 2v4h-2"/></svg></div><div><h3>Fans del car audio</h3><p>La misma filosofía de restauración que definió el car audio, en tu teléfono.</p></div></div>
+          <div class="aud reveal" style="--d:.18s"><div class="aicon"><svg viewBox="0 0 24 24"><path d="M12 3v18M7 8v8M17 8v8M3 11v2M21 11v2"/></svg></div><div><h3>Amantes del bajo</h3><p>Para quienes lo primero que hacen en cualquier app es subirle al bass.</p></div></div>
+          <div class="aud reveal" style="--d:.24s"><div class="aicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><div><h3>Curiosos del audio</h3><p>Perillas y controles DSP de verdad, para quienes disfrutan moldear su sonido.</p></div></div>
+          <div class="aud reveal" style="--d:.3s"><div class="aicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div><div><h3>Oyentes de todos los días</h3><p>Elige un preset (o deja que la IA ajuste) y dale play. Sin saber de audio.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section id="download">
+      <div class="wrap">
+        <div class="cta reveal">
+          <h2>Escucha lo que tu música estaba <span class="grad-txt">escondiendo.</span></h2>
+          <p>Descarga EpicenterDSP Lite gratis y pon el motor a trabajar con tus canciones. Cuando quieras todo el rack, la Full te espera.</p>
+          <div class="store-btns">
+            <a class="store-btn" data-link="playlite" href="https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite" rel="noopener">
+              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <span class="st"><small>Gratis · Google Play</small><strong>Descargar Lite</strong></span>
+            </a>
+            <a class="store-btn primary" data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener">
+              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <span class="st"><small>Versión completa</small><strong>Obtener Full</strong></span>
+            </a>
+            <a class="store-btn" data-link="appstore" href="#" rel="noopener">
+              <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="st"><small>App Store</small><strong>Próximamente</strong></span>
+            </a>
+          </div>
+          <p class="cta-sub">El efecto Epicenter no tiene límites de uso en ninguna versión.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="sec-head center reveal">
+          <span class="eyebrow"><span class="idx">07 —</span> FAQ</span>
+          <h2>Resolvemos tus <span class="grad-txt">dudas.</span></h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Qué es EpicenterDSP Player?<span class="fi"></span></button><div class="faq-a"><p>Un reproductor de música con un motor DSP integrado enfocado en bass restoration: refuerza y reconstruye en tiempo real las frecuencias graves profundas mientras tu música suena, sumando pegada, profundidad y presencia.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">¿En qué plataformas está?<span class="fi"></span></button><div class="faq-a"><p>Hoy en Android, en Google Play, en dos versiones: EpicenterDSP Lite (gratis) y EpicenterDSP Full (completa). La versión para iOS está en desarrollo y llegará a App Store próximamente.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Cuál es la diferencia entre Lite y Full?<span class="fi"></span></button><div class="faq-a"><p>La Lite es totalmente funcional para reproducir y usar el Epicenter sin restricciones. Lo que la diferencia de la Full: tope de 30 canciones, importación solo manual, EQ por presets (6 presets, +2 dB) en lugar del EQ manual de 31 bandas (±8 dB), sin la IA de auto-ajuste (Auto-EQ y Auto-Epicenter) y sin los efectos pro (Reverb, Concert Hall y sonido espacial).</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">¿El efecto Epicenter tiene límites en la Lite?<span class="fi"></span></button><div class="faq-a"><p>No. El efecto Epicenter es ilimitado en ambas versiones, y las 5 perillas (Sweep, Width, Intensity, Balance y Volume) son totalmente ajustables también en la Lite. No hay límite de canciones por día.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Funciona con cualquier canción?<span class="fi"></span></button><div class="faq-a"><p>El motor procesa cualquier canción, pero el resultado varía de tema a tema. Las canciones con bajos débiles o enterrados suelen beneficiarse más; las que ya vienen cargadas de bajo pueden necesitar solo un toque. El efecto trabaja con la información de bajos presente en la grabación.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Necesito audífonos o bocinas especiales?<span class="fi"></span></button><div class="faq-a"><p>No. Funciona con lo que ya tienes. Eso sí, el hardware importa: un equipo capaz de reproducir frecuencias más profundas revelará más de lo que el motor hace. Las bocinas muy pequeñas tienen límites físicos que ningún software puede saltarse.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Por qué suena más fuerte en unas canciones que en otras?<span class="fi"></span></button><div class="faq-a"><p>Porque cada canción se mezcla y masteriza distinto. Los temas con más contenido grave le dan más material al motor, así que la restauración se nota más. Es el comportamiento normal de un DSP, no una falla.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">¿Dónde consigo soporte?<span class="fi"></span></button><div class="faq-a"><p>Visita nuestra <a href="support/">página de soporte</a> o escríbenos directamente. Con gusto ayudamos con reproducción, compras y sugerencias.</p></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="brand-logo" src="assets/logo.svg" alt="EpicenterDSP Player" />
+          <p>Reproductor con motor DSP de restauración de bajos en tiempo real. Bass restored. Sound elevated.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <ul>
+            <li><a href="#heritage">Herencia</a></li>
+            <li><a href="#features">El motor</a></li>
+            <li><a href="#versions">Lite vs Full</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Descargas</h4>
+          <ul>
+            <li><a data-link="playlite" href="https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite" rel="noopener">Google Play — Lite</a></li>
+            <li><a data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener">Google Play — Full</a></li>
+            <li><a data-link="appstore" href="#" rel="noopener">App Store</a><span class="soon-tag">pronto</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal y soporte</h4>
+          <ul>
+            <li><a href="privacy/">Privacidad</a></li>
+            <li><a href="terms/">Términos</a></li>
+            <li><a href="support/">Soporte</a></li>
+            <li><a data-email href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> <span data-dev-name>EpicenterDSP</span>. Todos los derechos reservados.</p>
+        <p class="tm">Google Play y su logo son marcas de Google LLC. Apple y el logo de Apple son marcas de Apple Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

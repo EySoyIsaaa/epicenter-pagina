@@ -1,0 +1,7 @@
+# Herramientas locales / preview (no necesarias en el sitio publicado)
+.claude/
+
+# Basura del sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store

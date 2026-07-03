@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# PLACEHOLDER: after publishing, replace with your real URL and uncomment:
+# Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
