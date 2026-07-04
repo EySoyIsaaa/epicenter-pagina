@@ -1,0 +1,17 @@
+<!-- App icon (fuente). Exporta a PNG: icon-192.png, icon-512.png, apple-touch-icon.png (180x180). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="112" fill="#e6111d"/>
+  <g stroke="#0b0b0b" stroke-linecap="round">
+    <!-- waveform -->
+    <g stroke-width="18">
+      <line x1="120" y1="236" x2="120" y2="276"/>
+      <line x1="150" y1="212" x2="150" y2="300"/>
+      <line x1="180" y1="176" x2="180" y2="336"/>
+      <line x1="210" y1="224" x2="210" y2="288"/>
+    </g>
+    <!-- speaker cone -->
+    <circle cx="322" cy="256" r="96" stroke-width="20"/>
+    <circle cx="322" cy="256" r="52" stroke-width="16"/>
+  </g>
+  <circle cx="322" cy="256" r="24" fill="#0b0b0b"/>
+</svg>

@@ -1,138 +1,128 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"
+      data-title-es="Soporte — EPICENTERDSP (Android e iOS)"
+      data-title-en="Support — EPICENTERDSP (Android & iOS)">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soporte — EpicenterDSP Player (iOS y Android)</title>
-  <meta name="description" content="Soporte oficial de EpicenterDSP Player para iPhone, iPad y Android: contacto, solución de problemas, compras y reembolsos." />
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <script>(function(){try{var s=localStorage.getItem("edsp_lang");var l=s||((navigator.languages||[navigator.language||"en"]).some(function(x){return String(x).toLowerCase().indexOf("es")===0})?"es":"en");document.documentElement.lang=(l==="es"||l==="en")?l:"es";}catch(e){document.documentElement.lang="es";}})();</script>
+  <title>Soporte — EPICENTERDSP (Android e iOS)</title>
+  <meta name="description" content="Soporte oficial de EPICENTERDSP para Android e iOS: importar música, Lite vs Pro, EQ de 31 bandas, Auto-EQ, Auto-Epicenter, restaurar compra y problemas comunes." />
+  <link rel="canonical" href="https://epicenterdsp.com/support/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/json" id="i18n-meta">
+  {"es":{"title":"Soporte — EPICENTERDSP (Android e iOS)","desc":"Soporte oficial de EPICENTERDSP: importar música, Lite vs Pro, EQ de 31 bandas, Auto-EQ, Auto-Epicenter, restaurar compra y problemas comunes."},
+   "en":{"title":"Support — EPICENTERDSP (Android & iOS)","desc":"Official EPICENTERDSP support: importing music, Lite vs Pro, 31-band EQ, Auto-EQ, Auto-Epicenter, restoring purchases and common issues."}}
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main"><span data-lang="es">Saltar al contenido</span><span data-lang="en">Skip to content</span></a>
   <div class="bg-fx" aria-hidden="true"></div>
 
   <header class="nav scrolled" id="nav">
     <div class="wrap nav-inner">
-      <a href="../" class="brand" aria-label="EpicenterDSP Player — inicio">
-        <img class="brand-mark" src="../assets/mark.svg" alt="EpicenterDSP Player" />
+      <a href="/" class="brand" aria-label="EPICENTERDSP">
+        <img class="brand-mark" src="/assets/mark.svg" alt="EPICENTERDSP" width="52" height="32" />
         <span class="brand-word">EPICENTER <em>DSP</em></span>
       </a>
-      <nav class="nav-links" aria-label="Navegación principal">
-        <a href="../#features">Funciones</a>
-        <a href="../#versions">Lite vs Full</a>
-        <a href="../#faq">FAQ</a>
-        <a href="../#download" class="btn">Descargar</a>
+      <nav class="nav-links" id="navLinks" aria-label="Principal">
+        <a href="/#engine"><span data-lang="es">Motor</span><span data-lang="en">Engine</span></a>
+        <a href="/#versions">Lite vs Pro</a>
+        <a href="/#faq">FAQ</a>
+        <button class="lang-toggle" type="button" data-lang-btn aria-label="Cambiar idioma">EN</button>
+        <a href="/#download" class="btn nav-cta"><span data-lang="es">Descargar</span><span data-lang="en">Download</span></a>
       </nav>
-      <button class="nav-burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-mobile-actions">
+        <button class="lang-toggle" type="button" data-lang-btn aria-label="Cambiar idioma">EN</button>
+        <button class="nav-burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
-  <main class="doc-page">
+  <main class="doc-page" id="main">
     <div class="wrap">
       <article class="doc">
-        <h1>Soporte de <span class="grad-txt">EpicenterDSP</span></h1>
-        <p class="doc-meta">Soporte oficial · iPhone, iPad y Android</p>
-
-        <p>¿Algo no suena bien, una compra no se completó o tienes una idea para la app? Aquí estamos. La mayoría de las dudas se resuelven en esta página; para todo lo demás, escríbenos directamente y te respondemos.</p>
+        <h1><span data-lang="es">Soporte de <span class="grad-txt">EPICENTERDSP</span></span><span data-lang="en"><span class="grad-txt">EPICENTERDSP</span> support</span></h1>
+        <p class="doc-meta"><span data-lang="es">Android e iOS · Lite y Pro</span><span data-lang="en">Android & iOS · Lite and Pro</span></p>
 
         <div class="callout info">
-          <p><strong>Contacto directo:</strong> escríbenos a
-            <a data-email data-email-text href="mailto:epicenterdsp@gmail.com" style="color:var(--red-hi)">epicenterdsp@gmail.com</a>.
-            Respondemos normalmente en 1–2 días hábiles.
-            <br /><span style="color:var(--dim)">Need help in English? Write to the same address — we reply in English and Spanish.</span>
-          </p>
+          <p><span data-lang="es"><strong>Contacto directo:</strong> escríbenos a <a data-email data-email-text href="mailto:epicenterdsp@gmail.com" style="color:var(--red-hi)">epicenterdsp@gmail.com</a>. Respondemos normalmente en 1–2 días hábiles.</span><span data-lang="en"><strong>Direct contact:</strong> write to us at <a data-email data-email-text href="mailto:epicenterdsp@gmail.com" style="color:var(--red-hi)">epicenterdsp@gmail.com</a>. We usually reply within 1–2 business days.</span><br /><span style="color:var(--dim)"><span data-lang="es">También atendemos en inglés.</span><span data-lang="en">Support is available in English and Spanish.</span></span></p>
         </div>
 
         <div class="support-grid">
           <div class="support-card">
-            <h3> Soporte para iPhone / iOS</h3>
-            <p>Guía específica para usuarios de iOS: importar música, reproducción en segundo plano, permisos, compras y reembolsos en App Store.</p>
-            <a class="btn-ghost" href="ios/">Ver soporte iOS</a>
+            <h3><span data-lang="es">Soporte iOS (iPhone/iPad)</span><span data-lang="en">iOS support (iPhone/iPad)</span></h3>
+            <p><span data-lang="es">Guía específica para iOS: importar música, reproducción en segundo plano, compras y reembolsos en App Store.</span><span data-lang="en">iOS-specific guide: importing music, background playback, purchases and refunds on the App Store.</span></p>
+            <a class="btn-ghost" href="/support/ios/"><span data-lang="es">Ver soporte iOS</span><span data-lang="en">Open iOS support</span></a>
           </div>
           <div class="support-card">
-            <h3> Soporte para Android</h3>
-            <p>Optimización de batería, reproducción en segundo plano, compras y reembolsos en Google Play y solución de problemas.</p>
-            <a class="btn-ghost" href="#android">Ver soporte Android</a>
+            <h3><span data-lang="es">Soporte Android</span><span data-lang="en">Android support</span></h3>
+            <p><span data-lang="es">Optimización de batería, reproducción en segundo plano, compras y reembolsos en Google Play.</span><span data-lang="en">Battery optimization, background playback, purchases and refunds on Google Play.</span></p>
+            <a class="btn-ghost" href="#android"><span data-lang="es">Ver soporte Android</span><span data-lang="en">Open Android support</span></a>
           </div>
         </div>
 
-        <h2>Antes de escribir</h2>
-        <p>Para ayudarte más rápido, incluye lo siguiente en tu correo:</p>
+        <h2><span data-lang="es">Cómo importar tu música</span><span data-lang="en">How to import your music</span></h2>
+        <p><span data-lang="es">EPICENTERDSP reproduce música local de tu dispositivo. Entra a la sección de biblioteca y usa el importador para agregar canciones desde tu almacenamiento o la app de archivos. Concede el permiso de acceso cuando el sistema lo pida. En <strong>Lite</strong> la importación es manual y la biblioteca admite hasta 30 canciones; en <strong>Pro</strong> la biblioteca es sin límite.</span><span data-lang="en">EPICENTERDSP plays local music from your device. Open the library section and use the importer to add songs from your storage or the files app. Grant the access permission when the system asks. In <strong>Lite</strong>, import is manual and the library holds up to 30 songs; in <strong>Pro</strong>, the library is unlimited.</span></p>
+
+        <h2><span data-lang="es">Lite vs Pro</span><span data-lang="en">Lite vs Pro</span></h2>
         <ul>
-          <li>Modelo de tu dispositivo (p. ej. iPhone 15, iPad Air, Samsung Galaxy S24).</li>
-          <li>Versión del sistema (iOS o Android).</li>
-          <li>Versión de la app y si usas <strong>Lite</strong> o <strong>Full</strong>.</li>
-          <li>Tu salida de audio (audífonos con cable, Bluetooth/AirPods, bocina, sistema del auto).</li>
-          <li>Una breve descripción del problema y, si es posible, los pasos para reproducirlo.</li>
+          <li><span data-lang="es"><strong>Lite (gratis):</strong> motor Epicenter, presets, biblioteca de hasta 30 canciones, importación manual.</span><span data-lang="en"><strong>Lite (free):</strong> Epicenter engine, presets, library up to 30 songs, manual import.</span></li>
+          <li><span data-lang="es"><strong>Pro (de paga):</strong> biblioteca sin límite, <strong>EQ manual de 31 bandas</strong>, <strong>Auto-EQ</strong>, <strong>Auto-Epicenter</strong> (auto-ajuste inteligente) y funciones avanzadas.</span><span data-lang="en"><strong>Pro (paid):</strong> unlimited library, <strong>31-band manual EQ</strong>, <strong>Auto-EQ</strong>, <strong>Auto-Epicenter</strong> (smart auto-adjust) and advanced features.</span></li>
+          <li><span data-lang="es">Son apps separadas: al comprar Pro debes instalar la app Pro correspondiente a tu tienda.</span><span data-lang="en">They are separate apps: after buying Pro, install the Pro app for your store.</span></li>
         </ul>
 
-        <h2>Problemas comunes (iOS y Android)</h2>
+        <h2><span data-lang="es">EQ de 31 bandas, Auto-EQ y Auto-Epicenter (Pro)</span><span data-lang="en">31-band EQ, Auto-EQ and Auto-Epicenter (Pro)</span></h2>
+        <ul>
+          <li><span data-lang="es"><strong>EQ de 31 bandas:</strong> ajusta manualmente cada banda para afinar el sonido a tu equipo.</span><span data-lang="en"><strong>31-band EQ:</strong> manually adjust each band to tune the sound to your gear.</span></li>
+          <li><span data-lang="es"><strong>Auto-EQ:</strong> analiza la canción y propone un ajuste de ecualización automático que puedes editar.</span><span data-lang="en"><strong>Auto-EQ:</strong> analyzes the track and proposes an automatic EQ setting you can edit.</span></li>
+          <li><span data-lang="es"><strong>Auto-Epicenter:</strong> ajusta automáticamente el motor de restauración de graves según la canción.</span><span data-lang="en"><strong>Auto-Epicenter:</strong> automatically adjusts the bass-restoration engine based on the track.</span></li>
+        </ul>
+
+        <h2><span data-lang="es">Restaurar compra / descargar la versión correcta</span><span data-lang="en">Restore purchase / download the correct version</span></h2>
+        <p><span data-lang="es">Si compraste Pro y no se desbloqueó: usa la misma cuenta de la tienda con la que compraste, asegúrate de haber instalado la app Pro (es separada de Lite) y usa la opción de restaurar compra de tu tienda. Si continúa, escríbenos con tu recibo.</span><span data-lang="en">If you bought Pro and it didn't unlock: use the same store account you purchased with, make sure you installed the Pro app (it's separate from Lite), and use your store's restore-purchase option. If it persists, write to us with your receipt.</span></p>
+
+        <h2><span data-lang="es">Problemas comunes</span><span data-lang="en">Common issues</span></h2>
         <div class="trouble-list">
           <div class="trouble-item">
-            <h3>"No escucho diferencia."</h3>
-            <p>Verifica que el efecto esté activo (ACTIVE) y la Intensidad por encima del mínimo. Prueba con una canción de bajos claros — el efecto trabaja con la información grave de la grabación, así que temas con poco bajo cambian de forma más sutil. Las bocinas muy pequeñas no reproducen frecuencias muy profundas.</p>
+            <h3><span data-lang="es">"No escucho diferencia."</span><span data-lang="en">"I don't hear a difference."</span></h3>
+            <p><span data-lang="es">Verifica que el motor esté activo y la intensidad por encima del mínimo. Prueba con una canción de bajos claros y con un equipo con respuesta real en graves.</span><span data-lang="en">Make sure the engine is active and intensity is above minimum. Try a track with clear bass and gear with real low-end response.</span></p>
           </div>
           <div class="trouble-item">
-            <h3>El sonido se distorsiona con la intensidad alta.</h3>
-            <p>El refuerzo de bajos añade energía a la señal. Si escuchas distorsión, baja la Intensidad o reduce un poco el volumen para dar headroom.</p>
+            <h3><span data-lang="es">Distorsión con intensidad alta.</span><span data-lang="en">Distortion at high intensity.</span></h3>
+            <p><span data-lang="es">Baja la intensidad o el volumen para dar headroom. Algunas bocinas pequeñas distorsionan antes.</span><span data-lang="en">Lower intensity or volume to give headroom. Some small speakers distort earlier.</span></p>
           </div>
           <div class="trouble-item">
-            <h3>El Bluetooth suena distinto al cable.</h3>
-            <p>Los códecs Bluetooth comprimen el audio y cada bocina o audífono colorea el sonido distinto. Ajusta la Intensidad para cada dispositivo que uses.</p>
+            <h3><span data-lang="es">¿Por qué algunas canciones se notan más que otras?</span><span data-lang="en">Why do some songs show more than others?</span></h3>
+            <p><span data-lang="es">Cada canción se mezcla y masteriza distinto. Las que tienen más contenido grave le dan más material al motor; las ya saturadas o con poco bajo cambian menos.</span><span data-lang="en">Every song is mixed and mastered differently. Those with more low-end give the engine more to work with; already-saturated or bass-light tracks change less.</span></p>
           </div>
           <div class="trouble-item">
-            <h3>Llegué al límite de 30 canciones (Lite).</h3>
-            <p>La versión Lite permite una biblioteca de hasta 30 canciones. La versión Full la hace ilimitada e importa tu música automáticamente. El efecto Epicenter no tiene límites de uso en ninguna versión.</p>
+            <h3><span data-lang="es">¿Por qué en bocinas pequeñas casi no se nota el bajo profundo?</span><span data-lang="en">Why is deep bass barely noticeable on small speakers?</span></h3>
+            <p><span data-lang="es">Es un límite físico: una bocina pequeña no puede reproducir frecuencias muy bajas por más procesamiento que se aplique. En equipos con capacidad real de graves se aprecia mucho más.</span><span data-lang="en">It's a physical limit: a small speaker can't reproduce very low frequencies no matter the processing. On gear with real bass capability it's far more noticeable.</span></p>
           </div>
         </div>
 
-        <!-- ================= iOS destacado ================= -->
-        <h2 id="ios">Ayuda específica para iOS (iPhone / iPad)</h2>
-        <p>Puntos que suelen resolver la mayoría de las dudas en iPhone y iPad. Para la guía completa, abre la <a href="ios/">página de soporte para iOS</a>.</p>
+        <h2 id="android"><span data-lang="es">Android</span><span data-lang="en">Android</span></h2>
         <div class="trouble-list">
           <div class="trouble-item">
-            <h3>¿Cómo agrego música en iOS?</h3>
-            <p>Abre la app, ve a la sección de biblioteca y usa el importador de archivos para añadir canciones desde la app Archivos o desde tu almacenamiento. Concede el permiso de acceso cuando el sistema lo solicite.</p>
+            <h3><span data-lang="es">La reproducción se detiene en segundo plano.</span><span data-lang="en">Playback stops in the background.</span></h3>
+            <p><span data-lang="es">Algunos dispositivos cierran apps para ahorrar batería. En optimización de batería, excluye a EPICENTERDSP.</span><span data-lang="en">Some devices close apps to save battery. In battery optimization, exclude EPICENTERDSP.</span></p>
           </div>
           <div class="trouble-item">
-            <h3>La reproducción se pausa al bloquear el iPhone.</h3>
-            <p>Comprueba que el <strong>Modo de bajo consumo</strong> no esté forzando el cierre en segundo plano y que la app tenga permitido reproducir audio. Vuelve a abrir la app y reanuda la reproducción desde los controles.</p>
-          </div>
-          <div class="trouble-item">
-            <h3>Compré Full en App Store y no se desbloqueó.</h3>
-            <p>Con la misma cuenta de Apple de la compra, usa la opción de <strong>Restaurar compras</strong> dentro de la app. Si sigue sin desbloquearse, escríbenos con tu recibo de App Store y lo resolvemos.</p>
-          </div>
-          <div class="trouble-item">
-            <h3>Reembolsos en App Store.</h3>
-            <p>Los pagos los gestiona Apple. Solicita reembolsos en <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. Con gusto te orientamos, pero el reembolso lo procesa Apple.</p>
+            <h3><span data-lang="es">Reembolsos (Google Play).</span><span data-lang="en">Refunds (Google Play).</span></h3>
+            <p><span data-lang="es">Los gestiona Google desde el historial de pedidos de Google Play. Te orientamos con gusto.</span><span data-lang="en">Handled by Google from your Google Play order history. We're happy to guide you.</span></p>
           </div>
         </div>
 
-        <!-- ================= Android ================= -->
-        <h2 id="android">Ayuda específica para Android</h2>
-        <div class="trouble-list">
-          <div class="trouble-item">
-            <h3>La reproducción se detiene en segundo plano.</h3>
-            <p>Algunos dispositivos Android cierran apps en segundo plano para ahorrar batería. En los ajustes de optimización de batería, excluye a EpicenterDSP Player.</p>
-          </div>
-          <div class="trouble-item">
-            <h3>Compré Full en Google Play y no se desbloqueó.</h3>
-            <p>Verifica que iniciaste sesión con la misma cuenta de la compra. Recuerda que Full es una app independiente (com.epicenter.hifi). Si aun así falla, escríbenos con tu recibo de Google Play.</p>
-          </div>
-          <div class="trouble-item">
-            <h3>Reembolsos en Google Play.</h3>
-            <p>Los pagos los gestiona Google. Solicita reembolsos desde el historial de pedidos de Google Play. Te orientamos con gusto.</p>
-          </div>
-        </div>
-
-        <h2>Sugerencias de funciones</h2>
-        <p>¿Tienes una idea para mejorar la app? Escríbenos a <a data-email data-email-text href="mailto:epicenterdsp@gmail.com">epicenterdsp@gmail.com</a> con el asunto "Sugerencia".</p>
-
-        <h2>Legal</h2>
-        <p>Consulta la <a href="../privacy/">Política de privacidad</a> y los <a href="../terms/">Términos de uso</a>.</p>
+        <h2><span data-lang="es">Legal</span><span data-lang="en">Legal</span></h2>
+        <p><span data-lang="es">Consulta la <a href="/privacy/">Política de privacidad</a> y los <a href="/terms/">Términos de uso</a>.</span><span data-lang="en">See the <a href="/privacy/">Privacy Policy</a> and the <a href="/terms/">Terms of Use</a>.</span></p>
       </article>
     </div>
   </main>
@@ -140,13 +130,14 @@
   <footer>
     <div class="wrap">
       <div class="footer-bottom">
-        <p>© <span data-year>2026</span> <span data-dev-name>EpicenterDSP</span>. Todos los derechos reservados.</p>
-        <p><a href="../privacy/" style="color: var(--muted);">Privacidad</a> · <a href="../terms/" style="color: var(--muted);">Términos</a> · <a href="../support/" style="color: var(--muted);">Soporte</a></p>
+        <p>© <span data-year>2026</span> EPICENTERDSP. <span data-lang="es">Todos los derechos reservados.</span><span data-lang="en">All rights reserved.</span></p>
+        <p><a href="/privacy/" style="color:var(--muted)"><span data-lang="es">Privacidad</span><span data-lang="en">Privacy</span></a> · <a href="/terms/" style="color:var(--muted)"><span data-lang="es">Términos</span><span data-lang="en">Terms</span></a> · <a href="/support/" style="color:var(--muted)"><span data-lang="es">Soporte</span><span data-lang="en">Support</span></a></p>
       </div>
     </div>
   </footer>
 
-  <script src="../js/config.js" defer></script>
-  <script src="../js/main.js" defer></script>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/config.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

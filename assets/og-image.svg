@@ -1,0 +1,29 @@
+<!-- Fuente de la imagen social. Exporta a PNG 1200x630 como assets/og-image.png -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="'Chakra Petch','Arial Narrow',Arial,sans-serif">
+  <defs>
+    <radialGradient id="g" cx="30%" cy="20%" r="90%">
+      <stop offset="0" stop-color="#1a0708"/>
+      <stop offset="55%" stop-color="#0a0607"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <!-- glow -->
+  <ellipse cx="880" cy="300" rx="360" ry="260" fill="#f20d1e" opacity="0.10"/>
+  <!-- mark: waveform + speaker -->
+  <g stroke="#f20d1e" stroke-linecap="round">
+    <g stroke-width="9">
+      <line x1="150" y1="292" x2="150" y2="338"/>
+      <line x1="180" y1="262" x2="180" y2="368"/>
+      <line x1="210" y1="222" x2="210" y2="408"/>
+      <line x1="240" y1="278" x2="240" y2="352"/>
+    </g>
+    <circle cx="360" cy="315" r="86" stroke="#8a8a90" stroke-width="10"/>
+    <circle cx="360" cy="315" r="46" stroke="#f20d1e" stroke-width="8"/>
+  </g>
+  <circle cx="360" cy="315" r="20" fill="#f20d1e"/>
+  <!-- text -->
+  <text x="150" y="500" fill="#f4f4f5" font-size="72" font-weight="700" letter-spacing="4">EPICENTER<tspan fill="#f20d1e">DSP</tspan></text>
+  <text x="152" y="548" fill="#a4a4ad" font-size="30" font-weight="600" letter-spacing="2">Restaura el bajo. No solo lo subas.</text>
+  <text x="152" y="590" fill="#5c5c64" font-size="22" font-weight="500" letter-spacing="1">Procesamiento DSP en tiempo real · 100% local · epicenterdsp.com</text>
+</svg>
