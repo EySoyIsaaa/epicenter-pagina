@@ -1,118 +1,111 @@
-# EpicenterDSP Player — Sitio web oficial
+# EPICENTERDSP — Sitio oficial
 
-Landing profesional para **EpicenterDSP Player** (Android · iOS en camino).
-Estética de **hardware de audio** (negro mate + rojo señal), en español, con preloader de arranque.
-HTML + CSS + JS puros. Sin backend, sin build. Lista para **GitHub Pages**.
-
----
-
-## ⭐ LO PRIMERO: coloca tus archivos reales
-
-El sitio ya está cableado a tus imágenes reales por **nombre de archivo**. Mientras no existan,
-verás *placeholders honestos* (marcos con el nombre del archivo que va ahí, NO imitaciones de tu app).
-En cuanto arrastres tus archivos con estos nombres exactos, aparecen solos:
-
-| Archivo a colocar | Qué es |
-|---|---|
-| `assets/logo.png` | Tu logo real (el de la bocina + "EPICENTER DSP"). Se usa en nav y footer. Sin él se muestra el wordmark en texto. |
-| `assets/screenshots/app-1.png` | Captura real del **reproductor** (Head Unit). También se usa en el mockup del hero. |
-| `assets/screenshots/app-2.png` | Captura real de **Epicenter DSP** (la perilla de intensidad). |
-| `assets/screenshots/app-3.png` | Captura real de **Efectos espaciales**. |
-| `assets/screenshots/app-4.png` | Captura real de la **pantalla de inicio / splash**. |
-
-> Tamaño ideal de capturas: PNG ~1080×2340 (proporción de teléfono). Si usas otro formato (`.jpg`),
-> actualiza los `src` en `index.html` (busca `app-1.png`, etc.).
->
-> El logo grande que compartiste queda perfecto exportado a PNG con **fondo transparente**.
+Sitio estático (HTML + CSS + JS puro) de **EPICENTERDSP**, bilingüe **ES/EN**, listo para
+publicarse en **GitHub Pages** con el dominio **https://epicenterdsp.com/**.
+Sin frameworks, sin backend, sin analytics.
 
 ---
 
-## 📁 Estructura
+## 🗂️ Estructura
 
 ```
 /
-├── index.html              → Landing
-├── privacy/  terms/  support/   → Páginas legales y soporte (/privacy/, /terms/, /support/)
+├── index.html              → Landing (bilingüe ES/EN en un solo archivo)
+├── privacy/index.html      → Política de privacidad
+├── terms/index.html        → Términos de uso
+├── support/index.html      → Soporte (Android + iOS)
+├── support/ios/index.html  → Soporte específico iOS (iOS 15.6+)
 ├── 404.html
-├── css/styles.css          → Diseño (hardware negro/rojo + preloader)
-├── js/config.js            → ⭐ Links, correo, nombre legal
-├── js/main.js              → Preloader, nav, animaciones
+├── css/styles.css          → Diseño (negro/rojo, hardware premium) + bilingüe + responsive
+├── js/config.js            → ⭐ Enlaces de tiendas y correo (edítalo aquí)
+├── js/i18n.js              → Motor bilingüe (detección + cambio manual)
+├── js/main.js              → Preloader, nav, animaciones, iOS "muy pronto"
 ├── assets/
-│   ├── logo.png            → (colócalo tú)
-│   ├── favicon.svg         → Favicon (perilla roja; cámbialo si quieres)
-│   └── screenshots/        → app-1.png … app-4.png (colócalos tú)
-├── .nojekyll
-├── robots.txt
-└── README.md
+│   ├── logo.svg            → Logo (lockup) — real
+│   ├── mark.svg            → Isotipo — real
+│   ├── hires-audio.svg     → Badge Hi-Res Audio
+│   ├── favicon.svg         → Favicon
+│   ├── icon.svg            → Fuente del icono de app (exportar a PNG, ver abajo)
+│   ├── og-image.svg        → Fuente de la imagen social (exportar a PNG 1200×630)
+│   └── screenshots/*.png   → Capturas reales
+├── sitemap.xml   robots.txt   site.webmanifest   CNAME   .nojekyll
+```
+
+> Las rutas son **absolutas** (`/css/…`, `/assets/…`) porque el sitio se sirve en el **dominio raíz**
+> `epicenterdsp.com`. Si algún día lo pruebas en `usuario.github.io/repo/`, cambia a rutas relativas.
+
+---
+
+## ✏️ Cómo editar lo que más cambia
+
+### 1) Enlaces de tiendas y correo → `js/config.js`
+```js
+playLiteUrl: "https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite",
+playFullUrl: "https://play.google.com/store/apps/details?id=com.epicenter.hifi",
+appStoreUrl: "",                       // ← pega aquí el link de App Store cuando exista
+supportEmail: "epicenterdsp@gmail.com"
+```
+**iOS:** mientras `appStoreUrl` esté vacío, los botones de iOS muestran **"Muy pronto / En revisión"**.
+En cuanto pegues el enlace real, se convierten en botones de descarga automáticamente (no toques el HTML).
+
+### 2) Precios
+Aparecen como texto en `index.html` (busca `$175 MXN` y `$199 MXN`) y en `terms/index.html`.
+Actualízalos ahí si cambian.
+
+### 3) Textos legales
+`privacy/index.html`, `terms/index.html`. Cada bloque tiene la versión ES y EN
+(`<span data-lang="es">…</span><span data-lang="en">…</span>`). Cambia la fecha "Última actualización"
+si actualizas el contenido.
+
+### 4) Idioma
+`js/i18n.js` detecta el idioma (español si el navegador es ES; inglés en el resto) y permite el cambio
+manual con el botón **EN/ES** del menú. La elección se guarda en `localStorage`. Para traducir un texto
+nuevo, escribe las dos variantes con `data-lang="es"` / `data-lang="en"`.
+
+---
+
+## 🖼️ Iconos e imagen social (ya generados)
+
+Ya están creados y enlazados: `favicon.ico` (raíz), `assets/favicon-16/32/48.png`, `assets/favicon.svg`,
+`assets/apple-touch-icon.png` (180), `assets/icon-192.png`, `assets/icon-512.png` y `assets/og-image.png` (1200×630).
+Se generaron desde los SVG fuente (`assets/icon.svg`, `assets/favicon.svg`, `assets/og-image.svg`).
+Si cambias el logo, regénralos desde esos SVG (con cualquier exportador o `sharp`).
+
+**Rendimiento (recomendado):** convierte las capturas de `assets/screenshots/*.png` (≈0.8–1.9 MB c/u)
+a **WebP** y actualiza los `src` en `index.html` (o usa `<picture>`), o al menos recomprímelas. Ya tienen
+`width/height`, `loading="lazy"`, `decoding="async"` y la crítica `fetchpriority="high"`.
+
+---
+
+## 🚀 Publicar en GitHub Pages (tienes git y gh instalados)
+
+```powershell
+cd "C:\Users\Isaias\Desktop\pagina web epicenter"
+git init
+git add .
+git commit -m "Sitio EPICENTERDSP"
+git branch -M main
+gh auth login                 # una vez (navegador)
+gh repo create epicenterdsp-site --public --source=. --remote=origin --push
+```
+Luego: repo → **Settings → Pages → Deploy from a branch → main / root**.
+El archivo `CNAME` ya trae `epicenterdsp.com`.
+
+### Dominio (DNS en Cloudflare — ahí vive tu DNS)
+En Cloudflare → `epicenterdsp.com` → DNS: 4 registros **A** en `@` → `185.199.108.153`, `.109`, `.110`, `.111`
+y **CNAME** `www` → `TU-USUARIO.github.io`, todos en **DNS only (nube gris)**. En GitHub, Custom domain
+`epicenterdsp.com` + **Enforce HTTPS**.
+
+### Actualizar
+```powershell
+git add . && git commit -m "update" && git push
 ```
 
 ---
 
-## ✏️ Otros placeholders a editar
-
-### `js/config.js` (un archivo actualiza todo)
-| Valor | Estado |
-|---|---|
-| `playLiteUrl` | ✅ `com.epicenter.dsp.lite` |
-| `playFullUrl` | ✅ `com.epicenter.hifi` |
-| `appStoreUrl` | ⏳ Déjalo `""`. Los botones muestran "Próximamente" y se activan solos cuando pegues el link. |
-| `supportEmail` | ⚠️ Cambia `soporte@tudominio.com` por tu correo real |
-| `developerName` | ⚠️ Tu nombre legal si aplica |
-
-### Páginas legales (`privacy/`, `terms/`, `support/`)
-- Fechas `[DD de MES de AAAA]`, jurisdicción en Términos `[PAÍS / ESTADO]`, tiempo de respuesta en Soporte.
-- **Privacidad**: si usas anuncios/analítica (AdMob, Firebase…) DEBES declararlos en la sección 4.
-
-> 💡 Busca `PLACEHOLDER` en el proyecto para ubicar cada punto editable.
-
----
-
-## 🎬 Preloader
-Al abrir: la perilla (o tu logo real si existe `logo.png`) palpita con doble golpe tipo beat, con anillos
-y barra de progreso, y hace fade al sitio. Completo una vez por sesión, rápido después. Respeta
-`prefers-reduced-motion`. Sin configuración.
-
-## 🎛️ Sección "Herencia"
-Conecta la app con los procesadores de **bass restoration del car audio** (la perilla roja del faceplate
-es arte de marca decorativo, no una captura). Refuerza el posicionamiento premium y diferenciado.
-
----
-
-## 🚀 Publicar en GitHub Pages
-1. Crea un repo **público** (ej. `epicenterdsp-site`).
-2. Sube TODO el contenido de la carpeta (incluye `.nojekyll` y las subcarpetas).
-   - Web: repo → "uploading an existing file" → arrastra todo.
-   - Git:
-     ```bash
-     cd "C:\Users\Isaias\Desktop\pagina web epicenter"
-     git init && git add . && git commit -m "Sitio EpicenterDSP"
-     git branch -M main
-     git remote add origin https://github.com/TUUSUARIO/epicenterdsp-site.git
-     git push -u origin main
-     ```
-3. **Settings → Pages → Deploy from a branch → main / root → Save**.
-4. En ~1–2 min: `https://TUUSUARIO.github.io/epicenterdsp-site/`
-
-> Si es *project page* (URL con `/nombre-repo/`), edita las rutas absolutas de `404.html` con el nombre del repo.
-
-## 🌐 Dominio propio
-Settings → Pages → Custom domain. En tu DNS: 4 registros **A** a `185.199.108.153`, `.109`, `.110`, `.111`
-para el dominio raíz, y **CNAME** `www` → `TUUSUARIO.github.io`. Activa **Enforce HTTPS**.
-
----
-
-## 📈 Conversión (rápido)
-- **Capturas reales** = lo que más convierte. Primer screenshot de Google Play = la pantalla del motor DSP.
-- **Video preview** 15–30 s con antes/después del efecto.
-- Mensaje coherente entre web, título y descripción corta de Play (bass restoration / DSP / epicenter).
-- El popup "Premium" dentro de la app debe listar lo mismo que la tabla Lite vs Full de la web.
-- Responde reseñas (ASO). Keywords: bass boost, bass booster, DSP, ecualizador, subwoofer, car audio, epicenter.
-- **Nunca inventes cifras ni testimonios** (viola políticas y destruye confianza).
-
-## 🛡️ Verse serio
-- Dominio propio + correo con tu dominio (Cloudflare Email Routing gratis).
-- Páginas legales completas de verdad (Google Play exige URL de privacidad válida).
-- Consistencia visual entre ícono de la app, logo web y capturas (negro + rojo).
-
----
-*Revisa los textos legales con un asesor antes de publicar.*
+## ✅ Notas para App Store / Google Play
+- **Support URL** para Apple: `https://epicenterdsp.com/support` (funcional, bilingüe, con contacto visible).
+- Página iOS específica: `https://epicenterdsp.com/support/ios/` (requisito iOS 15.6+).
+- El correo `epicenterdsp@gmail.com` está visible y clicable en soporte, privacidad y términos.
+- Los botones de descarga apuntan a las apps reales (Lite y Pro en Google Play). iOS queda "muy pronto"
+  hasta que pegues `appStoreUrl`.

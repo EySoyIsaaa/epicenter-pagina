@@ -1,0 +1,16 @@
+{
+  "name": "EPICENTERDSP",
+  "short_name": "EPICENTERDSP",
+  "description": "Reproductor con procesamiento DSP en tiempo real para restaurar y reforzar el bajo. Procesamiento local en el dispositivo.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#060606",
+  "theme_color": "#0a0a0b",
+  "icons": [
+    { "src": "/assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
