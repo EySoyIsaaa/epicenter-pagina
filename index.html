@@ -17,6 +17,8 @@
       } catch (e) { document.documentElement.lang = "es"; }
     })();
   </script>
+  <!-- Crítico (inline, inmune a caché): oculta el idioma inactivo antes de cargar el CSS -->
+  <style>html[lang="en"] [data-lang="es"],html[lang="es"] [data-lang="en"]{display:none!important}</style>
 
   <title>EPICENTERDSP — Restaura el bajo. Reproductor con procesamiento DSP en tiempo real</title>
   <meta name="description" content="EPICENTERDSP es un reproductor con procesamiento DSP en tiempo real para restaurar y reforzar el bajo. Prueba Lite gratis en Android; desbloquea todo con Pro. Todo se procesa localmente en tu dispositivo." />
@@ -84,7 +86,7 @@
     "offers": [
       { "@type": "Offer", "name": "EPICENTERDSP Lite (Android)", "price": "0", "priceCurrency": "MXN", "category": "free" },
       { "@type": "Offer", "name": "EPICENTERDSP Pro (Android)", "price": "175", "priceCurrency": "MXN" },
-      { "@type": "Offer", "name": "EPICENTERDSP Pro (iOS)", "price": "199", "priceCurrency": "MXN" }
+      { "@type": "Offer", "name": "EPICENTERDSP Pro (iOS)", "price": "199", "priceCurrency": "MXN", "url": "https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490" }
     ]
   }
   </script>
@@ -167,15 +169,14 @@
                 <strong><span data-lang="es">Obtener Pro</span><span data-lang="en">Get Pro</span></strong>
               </span>
             </a>
-            <!-- iOS: sin URL real todavía; estado elegante "en revisión" (no rompe UX/SEO) -->
-            <button class="store-btn ios-soon" type="button" data-ios-soon aria-label="iOS — próximamente en App Store">
+            <!-- iOS (EPICENTERDSP Pro) — App Store; el enlace también está en js/config.js -->
+            <a class="store-btn" data-link="appstore" href="https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490" rel="noopener">
               <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
               <span class="st">
-                <small>App Store · iOS</small>
-                <strong><span data-lang="es">Muy pronto</span><span data-lang="en">Coming soon</span></strong>
+                <small>iOS · $199 MXN</small>
+                <strong><span data-lang="es">Obtener Pro</span><span data-lang="en">Get Pro</span></strong>
               </span>
-              <span class="soon-ribbon"><span data-lang="es">En revisión</span><span data-lang="en">In review</span></span>
-            </button>
+            </a>
           </div>
 
           <p class="hero-note">
@@ -607,15 +608,14 @@
               <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
               <span class="st"><small><span data-lang="es">Android · $175 MXN</span><span data-lang="en">Android · $175 MXN</span></small><strong><span data-lang="es">Obtener Pro</span><span data-lang="en">Get Pro</span></strong></span>
             </a>
-            <button class="store-btn ios-soon" type="button" data-ios-soon aria-label="iOS — próximamente en App Store">
+            <a class="store-btn" data-link="appstore" href="https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490" rel="noopener">
               <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-              <span class="st"><small>App Store · iOS</small><strong><span data-lang="es">Muy pronto</span><span data-lang="en">Coming soon</span></strong></span>
-              <span class="soon-ribbon"><span data-lang="es">En revisión</span><span data-lang="en">In review</span></span>
-            </button>
+              <span class="st"><small>iOS · $199 MXN</small><strong><span data-lang="es">Obtener Pro</span><span data-lang="en">Get Pro</span></strong></span>
+            </a>
           </div>
           <p class="cta-sub">
-            <span data-lang="es">iOS Pro $199 MXN, disponible al aprobarse en App Store.</span>
-            <span data-lang="en">iOS Pro $199 MXN, available once approved on the App Store.</span>
+            <span data-lang="es">Android Lite gratis · Pro $175 MXN · iOS Pro $199 MXN en App Store.</span>
+            <span data-lang="en">Android Lite free · Pro $175 MXN · iOS Pro $199 MXN on the App Store.</span>
           </p>
         </div>
       </div>
@@ -642,7 +642,7 @@
           </details>
           <details class="faq-item">
             <summary><span data-lang="es">¿Cuánto cuesta y dónde se compra?</span><span data-lang="en">How much is it and where do I buy it?</span><span class="fi" aria-hidden="true"></span></summary>
-            <div class="faq-a"><p><span data-lang="es">Lite es gratis en Google Play. Pro cuesta $175 MXN en Android (Google Play) y $199 MXN en iOS (App Store, al aprobarse). Las compras las gestiona cada tienda.</span><span data-lang="en">Lite is free on Google Play. Pro is $175 MXN on Android (Google Play) and $199 MXN on iOS (App Store, once approved). Purchases are handled by each store.</span></p></div>
+            <div class="faq-a"><p><span data-lang="es">Lite es gratis en Google Play. Pro cuesta $175 MXN en Android (Google Play) y $199 MXN en iOS (App Store). Las compras las gestiona cada tienda.</span><span data-lang="en">Lite is free on Google Play. Pro is $175 MXN on Android (Google Play) and $199 MXN on iOS (App Store). Purchases are handled by each store.</span></p></div>
           </details>
           <details class="faq-item">
             <summary><span data-lang="es">¿Funciona con cualquier canción y en cualquier equipo?</span><span data-lang="en">Does it work with any song and any gear?</span><span class="fi" aria-hidden="true"></span></summary>
@@ -698,7 +698,7 @@
           <ul>
             <li><a data-link="playlite" href="https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite" rel="noopener">Google Play — Lite</a></li>
             <li><a data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener">Google Play — Pro</a></li>
-            <li><span class="foot-soon">App Store — <span data-lang="es">muy pronto</span><span data-lang="en">coming soon</span></span></li>
+            <li><a data-link="appstore" href="https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490" rel="noopener">App Store — iOS (Pro)</a></li>
           </ul>
         </div>
         <div class="footer-col">
