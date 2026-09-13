@@ -11,14 +11,17 @@ Sin frameworks, sin backend, sin analytics.
 ```
 /
 ├── index.html              → Landing (bilingüe ES/EN en un solo archivo)
+├── links/index.html        → ⭐ Hub oficial de enlaces (para el QR de la lona) · móvil primero
 ├── privacy/index.html      → Política de privacidad
 ├── terms/index.html        → Términos de uso
 ├── support/index.html      → Soporte (Android + iOS)
 ├── support/ios/index.html  → Soporte específico iOS (iOS 15.6+)
 ├── 404.html
 ├── css/styles.css          → Diseño (negro/rojo, hardware premium) + bilingüe + responsive
-├── js/config.js            → ⭐ Enlaces de tiendas y correo (edítalo aquí)
+├── css/links.css           → Estilos propios de la página /links/ (reutiliza tokens de styles.css)
+├── js/config.js            → ⭐ Enlaces de tiendas, redes y correo (edítalo aquí)
 ├── js/i18n.js              → Motor bilingüe (detección + cambio manual)
+├── js/links.js             → /links/: detección de plataforma + cablea redes + oculta enlaces vacíos
 ├── js/main.js              → Preloader, nav, animaciones, iOS "muy pronto"
 ├── assets/
 │   ├── logo.svg            → Logo (lockup) — real
@@ -38,15 +41,29 @@ Sin frameworks, sin backend, sin analytics.
 
 ## ✏️ Cómo editar lo que más cambia
 
-### 1) Enlaces de tiendas y correo → `js/config.js`
+### 1) Enlaces de tiendas, redes y correo → `js/config.js`
 ```js
-playLiteUrl: "https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite",
-playFullUrl: "https://play.google.com/store/apps/details?id=com.epicenter.hifi",
-appStoreUrl: "",                       // ← pega aquí el link de App Store cuando exista
+playLiteUrl: "https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite", // Android gratis
+playFullUrl: "https://play.google.com/store/apps/details?id=com.epicenter.hifi",     // Android Pro
+appStoreUrl: "https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490",       // iOS Pro
+appStoreFreeUrl: "",   // ← iOS gratis. Vacío = en /links/ sale "Próximamente"
+social: {              // ← redes de /links/. Cada URL vacía se oculta automáticamente
+  tiktok: "https://www.tiktok.com/@epicenterdsp",
+  youtube: "https://www.youtube.com/@EpicenterDSP",
+  instagram: "https://www.instagram.com/epicenterdsp/",
+  facebook: "https://www.facebook.com/EpicenterDSP/"
+},
 supportEmail: "epicenterdsp@gmail.com"
 ```
-**iOS:** mientras `appStoreUrl` esté vacío, los botones de iOS muestran **"Muy pronto / En revisión"**.
+**iOS (index):** mientras `appStoreUrl` esté vacío, los botones de iOS muestran **"Muy pronto / En revisión"**.
 En cuanto pegues el enlace real, se convierten en botones de descarga automáticamente (no toques el HTML).
+
+**Página `/links/` (QR de la lona):** URL estable **https://epicenterdsp.com/links/** para el código QR.
+Botones de apps con **iconos reales** de tienda (App Store / Google Play), priorizando las versiones
+**de pago** (badge "Recomendada"). **iOS gratis** sale como **"Próximamente"** hasta que pegues
+`appStoreFreeUrl`. Las **redes** sin URL se ocultan solas (nada de botones muertos). El QR sigue
+funcionando aunque cambies cualquier enlace. La página detecta si el visitante entra desde iPhone o
+Android y **prioriza esa plataforma** (sin ocultar la otra).
 
 ### 2) Precios
 Aparecen como texto en `index.html` (busca `$175 MXN` y `$199 MXN`) y en `terms/index.html`.
