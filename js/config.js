@@ -12,10 +12,25 @@ const SITE_CONFIG = {
 
   /* --- App Store (EPICENTERDSP Pro para iOS) --- */
   appStoreUrl: "https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490",
+  // ← Versión GRATIS de iOS. Mientras esté vacío, en /links/ el botón se
+  //   muestra como "Próximamente". Pega el enlace de App Store cuando exista.
+  appStoreFreeUrl: "",
+
+  /* --- Redes sociales (usadas en /links/) ---
+     Cada red vacía se OCULTA automáticamente en la página de enlaces. */
+  social: {
+    tiktok: "https://www.tiktok.com/@epicenterdsp",
+    youtube: "https://www.youtube.com/@EpicenterDSP",
+    instagram: "https://www.instagram.com/epicenterdsp/",
+    facebook: "https://www.facebook.com/EpicenterDSP/",
+  },
 
   /* --- Soporte --- */
   supportEmail: "epicenterdsp@gmail.com",
 };
+
+/* Disponible para otras páginas (p. ej. /links/ lee window.SITE_CONFIG). */
+window.SITE_CONFIG = SITE_CONFIG;
 
 document.addEventListener("DOMContentLoaded", () => {
   const c = SITE_CONFIG;
