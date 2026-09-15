@@ -21,7 +21,7 @@
   <style>html[lang="en"] [data-lang="es"],html[lang="es"] [data-lang="en"]{display:none!important}</style>
 
   <title>EPICENTERDSP — Restaura el bajo. Reproductor con procesamiento DSP en tiempo real</title>
-  <meta name="description" content="EPICENTERDSP es un reproductor con procesamiento DSP en tiempo real para restaurar y reforzar el bajo. Prueba Lite gratis en Android; desbloquea todo con Pro. Todo se procesa localmente en tu dispositivo." />
+  <meta name="description" content="EPICENTERDSP es un reproductor con procesamiento DSP en tiempo real para restaurar y reforzar el bajo. Prueba Lite gratis en Android e iOS; desbloquea todo con Pro. Todo se procesa localmente en tu dispositivo." />
   <meta name="theme-color" content="#0a0a0b" />
   <link rel="canonical" href="https://epicenterdsp.com/" />
 
@@ -64,11 +64,11 @@
   {
     "es": {
       "title": "EPICENTERDSP — Restaura el bajo. Reproductor con procesamiento DSP en tiempo real",
-      "desc": "EPICENTERDSP es un reproductor con procesamiento DSP en tiempo real para restaurar y reforzar el bajo. Prueba Lite gratis en Android; desbloquea todo con Pro. Todo se procesa localmente."
+      "desc": "EPICENTERDSP es un reproductor con procesamiento DSP en tiempo real para restaurar y reforzar el bajo. Prueba Lite gratis en Android e iOS; desbloquea todo con Pro. Todo se procesa localmente."
     },
     "en": {
       "title": "EPICENTERDSP — Restore the bass. Music player with real-time DSP processing",
-      "desc": "EPICENTERDSP is a music player with real-time DSP processing to restore and reinforce bass. Try Lite free on Android; unlock everything with Pro. Everything is processed locally on your device."
+      "desc": "EPICENTERDSP is a music player with real-time DSP processing to restore and reinforce bass. Try Lite free on Android and iOS; unlock everything with Pro. Everything is processed locally on your device."
     }
   }
   </script>
@@ -85,6 +85,7 @@
     "description": "Reproductor de música con procesamiento DSP en tiempo real enfocado en la restauración y el refuerzo del bajo. Procesamiento local en el dispositivo.",
     "offers": [
       { "@type": "Offer", "name": "EPICENTERDSP Lite (Android)", "price": "0", "priceCurrency": "MXN", "category": "free" },
+      { "@type": "Offer", "name": "EPICENTERDSP Lite (iOS)", "price": "0", "priceCurrency": "MXN", "category": "free", "url": "https://apps.apple.com/mx/app/epicenterdsp-lite/id6808877752" },
       { "@type": "Offer", "name": "EPICENTERDSP Pro (Android)", "price": "175", "priceCurrency": "MXN" },
       { "@type": "Offer", "name": "EPICENTERDSP Pro (iOS)", "price": "199", "priceCurrency": "MXN", "url": "https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490" }
     ]
@@ -106,6 +107,7 @@
   </div>
 
   <div class="bg-fx" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
   <!-- ================= NAV ================= -->
   <header class="nav" id="nav">
@@ -138,6 +140,11 @@
   <main id="main">
     <!-- ================= HERO ================= -->
     <section class="hero" id="top">
+      <div class="hero-stage" aria-hidden="true">
+        <span class="cone"></span>
+        <span class="sweep"></span>
+      </div>
+
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <span class="hero-badge">
@@ -147,12 +154,32 @@
           </span>
           <h1>
             <span data-lang="es">Restaura el bajo.<br /><span class="grad-txt">No solo lo subas.</span></span>
-            <span data-lang="en">Restore the bass.<br /><span class="grad-txt">Don't just boost it.</span></span>
+            <span data-lang="en">Restore the bass.<br /><span class="grad-txt">Don&rsquo;t just boost it.</span></span>
           </h1>
+          <p class="feelbass">Feel <em>Bass</em> Different</p>
           <p class="hero-lead">
             <span data-lang="es">EPICENTERDSP es un reproductor con procesamiento DSP en tiempo real que devuelve cuerpo, profundidad y presencia a los graves de tu música. Una experiencia inspirada en la cultura del car audio, ahora en tu teléfono.</span>
             <span data-lang="en">EPICENTERDSP is a music player with real-time DSP processing that brings body, depth and presence back to the low end of your music. An experience inspired by car-audio culture — now on your phone.</span>
           </p>
+
+          <div class="hero-eq" aria-hidden="true">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
 
           <div class="store-btns">
             <a class="store-btn primary" data-link="playlite" href="https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite" rel="noopener">
@@ -161,6 +188,10 @@
                 <small><span data-lang="es">Gratis · Google Play</span><span data-lang="en">Free · Google Play</span></small>
                 <strong><span data-lang="es">Probar Lite</span><span data-lang="en">Try Lite</span></strong>
               </span>
+            </a>
+            <a class="store-btn primary" data-link="iosfree" href="https://apps.apple.com/mx/app/epicenterdsp-lite/id6808877752" rel="noopener">
+              <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="st"><small><span data-lang="es">Gratis &middot; App Store</span><span data-lang="en">Free &middot; App Store</span></small><strong><span data-lang="es">Probar Lite</span><span data-lang="en">Try Lite</span></strong></span>
             </a>
             <a class="store-btn" data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener">
               <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
@@ -180,29 +211,34 @@
           </div>
 
           <p class="hero-note">
-            <span data-lang="es"><strong>Prueba Lite gratis</strong> en Android y siente el motor Epicenter. Desbloquea todo con <strong>Pro</strong>.</span>
-            <span data-lang="en"><strong>Try Lite free</strong> on Android and feel the Epicenter engine. Unlock everything with <strong>Pro</strong>.</span>
+            <span data-lang="es"><strong>Prueba Lite gratis</strong> en Android e iOS y siente el motor Epicenter. Desbloquea todo con <strong>Pro</strong>.</span>
+            <span data-lang="en"><strong>Try Lite free</strong> on Android and iOS and feel the Epicenter engine. Unlock everything with <strong>Pro</strong>.</span>
           </p>
 
-          <ul class="spec-list">
-            <li><span class="v">31</span><span class="k"><span data-lang="es">Bandas de EQ · Pro</span><span data-lang="en">EQ bands · Pro</span></span></li>
-            <li><span class="v">100%</span><span class="k"><span data-lang="es">Local en tu equipo</span><span data-lang="en">On-device</span></span></li>
-            <li><span class="v"><em>0</em></span><span class="k"><span data-lang="es">Cuentas · rastreo</span><span data-lang="en">Accounts · tracking</span></span></li>
+          <ul class="pillars">
+            <li><span data-lang="es">Control</span><span data-lang="en">Control</span></li>
+            <li><span data-lang="es">Claridad</span><span data-lang="en">Clarity</span></li>
+            <li><span data-lang="es">Potencia</span><span data-lang="en">Power</span></li>
+            <li><span data-lang="es">En tus manos</span><span data-lang="en">In your hands</span></li>
           </ul>
         </div>
 
         <div class="hero-visual">
-          <div class="phone" id="heroPhone">
-            <div class="phone-glow" aria-hidden="true"></div>
-            <div class="phone-frame">
-              <div class="phone-screen">
-                <div class="slot">
-                  <img src="/assets/screenshots/player.png" alt="EPICENTERDSP — pantalla del reproductor"
-                       width="1242" height="2688" fetchpriority="high" decoding="async" onerror="this.remove()" />
+          <div class="phone-duo" id="heroPhone">
+            <div class="phone ph-back">
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div class="slot"><img src="/assets/screenshots/player.png" alt="EPICENTERDSP &mdash; pantalla del reproductor" width="1242" height="2688" fetchpriority="high" decoding="async" onerror="this.remove()" /></div>
+                  <div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>player.png</b></div>
                 </div>
-                <div class="slot-ph" aria-hidden="true">
-                  <div class="knob"><span class="knob-arc"></span></div>
-                  <b>player.png</b>
+              </div>
+            </div>
+            <div class="phone ph-front">
+              <div class="phone-glow" aria-hidden="true"></div>
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div class="slot"><img src="/assets/screenshots/epicenter.png" alt="EPICENTERDSP &mdash; motor Epicenter" width="1242" height="2688" fetchpriority="high" decoding="async" onerror="this.remove()" /></div>
+                  <div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>epicenter.png</b></div>
                 </div>
               </div>
             </div>
@@ -387,7 +423,7 @@
           <div class="vcard">
             <p class="vtier"><span data-lang="es">Versión gratuita</span><span data-lang="en">Free version</span></p>
             <h3>EPICENTERDSP Lite</h3>
-            <p class="vprice"><span data-lang="es">Gratis · Android</span><span data-lang="en">Free · Android</span></p>
+            <p class="vprice"><span data-lang="es">Gratis · Android e iOS</span><span data-lang="en">Free · Android &amp; iOS</span></p>
             <ul class="vlist">
               <li><span data-lang="es">Motor Epicenter completo para probar</span><span data-lang="en">Full Epicenter engine to try</span></li>
               <li><span data-lang="es">Presets del motor</span><span data-lang="en">Engine presets</span></li>
@@ -396,7 +432,10 @@
               <li class="muted"><span data-lang="es">Solo anuncios intersticiales</span><span data-lang="en">Interstitial ads only</span></li>
               <li><span data-lang="es">Sin cuentas · 100% local</span><span data-lang="en">No accounts · 100% local</span></li>
             </ul>
-            <a class="btn-ghost" data-link="playlite" href="https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite" rel="noopener"><span data-lang="es">Probar Lite gratis</span><span data-lang="en">Try Lite free</span></a>
+            <div class="vcta">
+              <a class="btn-ghost" data-link="playlite" href="https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite" rel="noopener">Google Play</a>
+              <a class="btn-ghost" data-link="iosfree" href="https://apps.apple.com/mx/app/epicenterdsp-lite/id6808877752" rel="noopener">App Store</a>
+            </div>
           </div>
 
           <div class="vcard full">
@@ -411,7 +450,10 @@
               <li><span data-lang="es">Efectos y funciones avanzadas</span><span data-lang="en">Advanced effects and features</span></li>
               <li><span data-lang="es">Sin anuncios · sin cuentas · 100% local</span><span data-lang="en">No ads · no accounts · 100% local</span></li>
             </ul>
-            <a class="btn" data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener"><span data-lang="es">Obtener Pro (Android)</span><span data-lang="en">Get Pro (Android)</span></a>
+            <div class="vcta">
+              <a class="btn" data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener">Google Play</a>
+              <a class="btn" data-link="appstore" href="https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490" rel="noopener">App Store</a>
+            </div>
           </div>
         </div>
 
@@ -583,12 +625,12 @@
           </p>
         </div>
         <div class="shots">
-          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/player.png" alt="EPICENTERDSP — reproductor" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>player.png</b></div></div></figure>
-          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/epicenter.png" alt="EPICENTERDSP — motor Epicenter" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>epicenter.png</b></div></div></figure>
-          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/eq.png" alt="EPICENTERDSP — ecualizador 31 bandas" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>eq.png</b></div></div></figure>
-          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/fx.png" alt="EPICENTERDSP — efectos" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>fx.png</b></div></div></figure>
-          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/library.png" alt="EPICENTERDSP — biblioteca" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>library.png</b></div></div></figure>
-          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/splash.png" alt="EPICENTERDSP — inicio" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>splash.png</b></div></div></figure>
+          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/player.png" alt="EPICENTERDSP — reproductor" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>player.png</b></div></div><figcaption><span data-lang="es">Reproductor</span><span data-lang="en">Player</span></figcaption></figure>
+          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/epicenter.png" alt="EPICENTERDSP — motor Epicenter" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>epicenter.png</b></div></div><figcaption><span data-lang="es">Motor Epicenter</span><span data-lang="en">Epicenter engine</span></figcaption></figure>
+          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/eq.png" alt="EPICENTERDSP — ecualizador 31 bandas" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>eq.png</b></div></div><figcaption><span data-lang="es">EQ 31 bandas</span><span data-lang="en">31-band EQ</span></figcaption></figure>
+          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/fx.png" alt="EPICENTERDSP — efectos" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>fx.png</b></div></div><figcaption><span data-lang="es">Efectos</span><span data-lang="en">Effects</span></figcaption></figure>
+          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/library.png" alt="EPICENTERDSP — biblioteca" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>library.png</b></div></div><figcaption><span data-lang="es">Biblioteca</span><span data-lang="en">Library</span></figcaption></figure>
+          <figure class="shot"><div class="shot-inner"><div class="slot"><img src="/assets/screenshots/splash.png" alt="EPICENTERDSP — inicio" width="1242" height="2688" loading="lazy" decoding="async" onerror="this.remove()" /></div><div class="slot-ph" aria-hidden="true"><div class="knob"><span class="knob-arc"></span></div><b>splash.png</b></div></div><figcaption><span data-lang="es">Inicio</span><span data-lang="en">Start</span></figcaption></figure>
         </div>
       </div>
     </section>
@@ -610,6 +652,10 @@
               <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
               <span class="st"><small><span data-lang="es">Gratis · Google Play</span><span data-lang="en">Free · Google Play</span></small><strong><span data-lang="es">Probar Lite</span><span data-lang="en">Try Lite</span></strong></span>
             </a>
+            <a class="store-btn primary" data-link="iosfree" href="https://apps.apple.com/mx/app/epicenterdsp-lite/id6808877752" rel="noopener">
+              <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="st"><small><span data-lang="es">Gratis &middot; App Store</span><span data-lang="en">Free &middot; App Store</span></small><strong><span data-lang="es">Probar Lite</span><span data-lang="en">Try Lite</span></strong></span>
+            </a>
             <a class="store-btn" data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener">
               <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
               <span class="st"><small><span data-lang="es">Android · $175 MXN</span><span data-lang="en">Android · $175 MXN</span></small><strong><span data-lang="es">Obtener Pro</span><span data-lang="en">Get Pro</span></strong></span>
@@ -620,8 +666,8 @@
             </a>
           </div>
           <p class="cta-sub">
-            <span data-lang="es">Android Lite gratis · Pro $175 MXN · iOS Pro $199 MXN en App Store.</span>
-            <span data-lang="en">Android Lite free · Pro $175 MXN · iOS Pro $199 MXN on the App Store.</span>
+            <span data-lang="es">Lite gratis en Android e iOS · Pro $175 MXN (Android) · Pro $199 MXN (iOS).</span>
+            <span data-lang="en">Lite free on Android & iOS · Pro $175 MXN (Android) · Pro $199 MXN (iOS).</span>
           </p>
         </div>
       </div>
@@ -704,7 +750,8 @@
           <ul>
             <li><a data-link="playlite" href="https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite" rel="noopener">Google Play — Lite</a></li>
             <li><a data-link="playfull" href="https://play.google.com/store/apps/details?id=com.epicenter.hifi" rel="noopener">Google Play — Pro</a></li>
-            <li><a data-link="appstore" href="https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490" rel="noopener">App Store — iOS (Pro)</a></li>
+            <li><a data-link="iosfree" href="https://apps.apple.com/mx/app/epicenterdsp-lite/id6808877752" rel="noopener">App Store — Lite</a></li>
+            <li><a data-link="appstore" href="https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490" rel="noopener">App Store — Pro</a></li>
           </ul>
         </div>
         <div class="footer-col">

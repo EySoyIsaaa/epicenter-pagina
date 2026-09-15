@@ -46,7 +46,7 @@ Sin frameworks, sin backend, sin analytics.
 playLiteUrl: "https://play.google.com/store/apps/details?id=com.epicenter.dsp.lite", // Android gratis
 playFullUrl: "https://play.google.com/store/apps/details?id=com.epicenter.hifi",     // Android Pro
 appStoreUrl: "https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490",       // iOS Pro
-appStoreFreeUrl: "",   // ← iOS gratis. Vacío = en /links/ sale "Próximamente"
+appStoreFreeUrl: "https://apps.apple.com/mx/app/epicenterdsp-lite/id6808877752", // iOS gratis (Lite)
 social: {              // ← redes de /links/. Cada URL vacía se oculta automáticamente
   tiktok: "https://www.tiktok.com/@epicenterdsp",
   youtube: "https://www.youtube.com/@EpicenterDSP",
@@ -55,13 +55,13 @@ social: {              // ← redes de /links/. Cada URL vacía se oculta autom�
 },
 supportEmail: "epicenterdsp@gmail.com"
 ```
-**iOS (index):** mientras `appStoreUrl` esté vacío, los botones de iOS muestran **"Muy pronto / En revisión"**.
-En cuanto pegues el enlace real, se convierten en botones de descarga automáticamente (no toques el HTML).
+**iOS:** ya están publicadas ambas apps — **Lite (gratis)** y **Pro**. Si alguna vez vacías un enlace en
+`config.js`, ese botón se degrada solo; no hay que tocar el HTML.
 
 **Página `/links/` (QR de la lona):** URL estable **https://epicenterdsp.com/links/** para el código QR.
 Botones de apps con **iconos reales** de tienda (App Store / Google Play), priorizando las versiones
-**de pago** (badge "Recomendada"). **iOS gratis** sale como **"Próximamente"** hasta que pegues
-`appStoreFreeUrl`. Las **redes** sin URL se ocultan solas (nada de botones muertos). El QR sigue
+**de pago** (badge "Recomendada"). Las **cuatro** versiones están activas (Lite y Pro en Android e iOS). Si algún enlace se vacía
+en `config.js`, ese botón se oculta solo (iOS gratis pasa a «Próximamente»): nada de botones muertos. El QR sigue
 funcionando aunque cambies cualquier enlace. La página detecta si el visitante entra desde iPhone o
 Android y **prioriza esa plataforma** (sin ocultar la otra).
 
@@ -124,5 +124,4 @@ git add . && git commit -m "update" && git push
 - **Support URL** para Apple: `https://epicenterdsp.com/support` (funcional, bilingüe, con contacto visible).
 - Página iOS específica: `https://epicenterdsp.com/support/ios/` (requisito iOS 15.6+).
 - El correo `epicenterdsp@gmail.com` está visible y clicable en soporte, privacidad y términos.
-- Los botones de descarga apuntan a las apps reales (Lite y Pro en Google Play). iOS queda "muy pronto"
-  hasta que pegues `appStoreUrl`.
+- Los botones de descarga apuntan a las **cuatro** apps reales: Lite y Pro en Google Play, y Lite y Pro en App Store.

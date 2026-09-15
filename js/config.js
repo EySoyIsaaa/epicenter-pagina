@@ -12,9 +12,8 @@ const SITE_CONFIG = {
 
   /* --- App Store (EPICENTERDSP Pro para iOS) --- */
   appStoreUrl: "https://apps.apple.com/mx/app/epicenterdsp-player/id6785658490",
-  // ← Versión GRATIS de iOS. Mientras esté vacío, en /links/ el botón se
-  //   muestra como "Próximamente". Pega el enlace de App Store cuando exista.
-  appStoreFreeUrl: "",
+  // ← EPICENTERDSP Lite para iOS (versión gratuita).
+  appStoreFreeUrl: "https://apps.apple.com/mx/app/epicenterdsp-lite/id6808877752",
 
   /* --- Redes sociales (usadas en /links/) ---
      Cada red vacía se OCULTA automáticamente en la página de enlaces. */
@@ -39,6 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('[data-link="playfull"]').forEach((el) => (el.href = c.playFullUrl));
   if (c.appStoreUrl) {
     document.querySelectorAll('[data-link="appstore"]').forEach((el) => (el.href = c.appStoreUrl));
+  }
+  if (c.appStoreFreeUrl) {
+    document.querySelectorAll('[data-link="iosfree"]').forEach((el) => (el.href = c.appStoreFreeUrl));
   }
 
   document.querySelectorAll("[data-email]").forEach((el) => {
