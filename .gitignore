@@ -5,3 +5,10 @@
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Supabase local state and credentials
+.env
+.env.*
+!.env.example
+/supabase/.branches/
+/supabase/.temp/

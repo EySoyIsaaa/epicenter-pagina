@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#08090D">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co http://127.0.0.1:54321 http://localhost:54321; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Administración Puebla 2026 | EpicenterDSP</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="../puebla.css">
+  <link rel="stylesheet" href="./admin.css">
+  <script type="module" src="./admin.js"></script>
+</head>
+<body class="puebla-body puebla-admin">
+  <a class="puebla-skip" href="#admin-main">Saltar al contenido</a>
+  <header class="admin-header">
+    <div class="admin-shell admin-topbar">
+      <a class="admin-brand" href="../">
+        <img src="../../assets/mark.svg" alt="" width="39" height="39">
+        <span><strong>EPICENTERDSP</strong><small>OPERACIONES · PUEBLA 2026</small></span>
+      </a>
+      <div class="admin-top-actions">
+        <a class="admin-text-link" href="../">Portal de visitantes <span aria-hidden="true">↗</span></a>
+        <button class="puebla-button" id="sign-out" type="button" hidden>Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-shell" id="admin-main">
+    <section class="admin-login" id="login-panel" aria-labelledby="login-title">
+      <div class="admin-intro">
+        <p class="puebla-kicker">InnovaTecNM Nacional 2026</p>
+        <h1 id="login-title" tabindex="-1">Control de campaña<span>.</span></h1>
+        <p>Administra las licencias de EpicenterDSP Pro y las invitaciones del stand en Puebla.</p>
+        <div class="admin-signal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <form class="puebla-panel admin-signin" id="sign-in" method="post" aria-labelledby="sign-in-title">
+        <span class="admin-badge">Acceso restringido</span>
+        <h2 id="sign-in-title">Inicia sesión</h2>
+        <fieldset id="sign-in-fields" disabled>
+          <label for="admin-email">Correo electrónico</label>
+          <input class="puebla-input" id="admin-email" type="email" name="email" autocomplete="username" maxlength="254" required>
+          <label for="admin-password">Contraseña</label>
+          <input class="puebla-input" id="admin-password" type="password" name="password" autocomplete="current-password" required>
+          <button class="puebla-button puebla-button--primary" type="submit">Entrar al panel</button>
+        </fieldset>
+        <p class="admin-feedback" id="login-feedback" role="status" aria-live="polite"></p>
+        <noscript><p class="admin-feedback">Activa JavaScript para acceder al panel.</p></noscript>
+      </form>
+    </section>
+
+    <div id="dashboard" hidden>
+      <div class="admin-titlebar">
+        <div>
+          <p class="puebla-kicker">Centro de operaciones</p>
+          <h1 id="dashboard-title" tabindex="-1">Puebla 2026</h1>
+          <p id="campaign-caption">InnovaTecNM Nacional · Puebla, México</p>
+        </div>
+        <div class="admin-toolbar">
+          <span class="admin-badge" id="campaign-status">Consultando campaña</span>
+          <button class="puebla-button" id="reload-dashboard" type="button">Actualizar datos</button>
+        </div>
+      </div>
+      <nav class="admin-nav" aria-label="Secciones del panel">
+        <a href="#overview">Resumen</a>
+        <a href="#inventory">Inventario</a>
+        <a href="#invitations">Invitaciones</a>
+        <a href="#campaign">Campaña</a>
+        <a href="#activity">Actividad</a>
+      </nav>
+      <p class="admin-feedback" id="dashboard-feedback" role="status" aria-live="polite"></p>
+
+      <section class="admin-section" id="overview" aria-labelledby="overview-title">
+        <div class="admin-section-heading">
+          <div><p class="puebla-kicker">01 / Operación</p><h2 id="overview-title">Resumen</h2></div>
+          <button class="puebla-button" id="export-stats" type="button" disabled>Descargar estadísticas CSV</button>
+        </div>
+        <dl class="admin-metrics" id="metrics">
+          <div><dt>Códigos totales</dt><dd data-metric="total">—</dd></div>
+          <div><dt>Android disponibles</dt><dd data-metric="android_available">—</dd></div>
+          <div><dt>iOS disponibles</dt><dd data-metric="ios_available">—</dd></div>
+          <div><dt>Entregados</dt><dd data-metric="delivered">—</dd></div>
+          <div><dt>Canje verificado</dt><dd data-metric="redeemed_verified">—</dd></div>
+          <div><dt>Plataformas agotadas</dt><dd data-metric="exhausted_platforms">—</dd></div>
+          <div><dt>Caducados o deshabilitados</dt><dd data-metric="unavailable">—</dd></div>
+          <div><dt>Invitaciones generadas</dt><dd data-metric="invitations">—</dd></div>
+        </dl>
+        <p class="admin-help">Una plataforma puede quedar sin entregas cuando se acaba su inventario o se alcanza un límite. La entrega de un código y la verificación de su canje son eventos distintos.</p>
+        <div class="puebla-panel admin-card">
+          <h3>Entregas por día</h3>
+          <p class="admin-help">Fechas de Puebla, México</p>
+          <p id="deliveries-empty" class="admin-empty">Aún no hay entregas registradas.</p>
+          <div class="admin-table-wrap" id="deliveries-wrap" hidden>
+            <table class="admin-table">
+              <caption class="admin-sr-only">Licencias entregadas por día</caption>
+              <thead><tr><th scope="col">Fecha</th><th scope="col">Android</th><th scope="col">iOS</th><th scope="col">Total</th></tr></thead>
+              <tbody id="deliveries-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-section" id="inventory" aria-labelledby="inventory-title">
+        <div class="admin-section-heading">
+          <div><p class="puebla-kicker">02 / Tiendas</p><h2 id="inventory-title">Inventario de licencias</h2></div>
+        </div>
+        <form class="puebla-panel admin-card" id="import-form">
+          <h3>Importar códigos</h3>
+          <p class="admin-help" id="file-help">Elige un CSV o TXT de Google Play Console o App Store Connect. Usa un código por línea o una columna con encabezado de código. El máximo por archivo es 512 KiB y 10,000 registros.</p>
+          <fieldset class="admin-form" id="import-fields">
+            <div class="admin-form-row">
+              <label for="import-platform">Plataforma
+                <select class="puebla-input" id="import-platform" required>
+                  <option value="">Selecciona una plataforma</option>
+                  <option value="android">Android · Google Play</option>
+                  <option value="ios">iOS · App Store</option>
+                </select>
+              </label>
+              <label for="import-file">Archivo CSV o TXT
+                <input class="puebla-input" id="import-file" type="file" accept=".csv,.txt,text/csv,text/plain" aria-describedby="file-help" required>
+              </label>
+            </div>
+            <div class="admin-preview" id="import-preview" hidden>
+              <h4>Vista previa</h4>
+              <p id="import-summary"></p>
+              <ul id="import-samples" aria-label="Muestra de códigos enmascarados"></ul>
+              <p class="admin-help">Los códigos que ya existan en el inventario se omitirán al importar.</p>
+            </div>
+            <div><button class="puebla-button puebla-button--primary" id="import-submit" type="submit" disabled>Importar códigos válidos</button></div>
+          </fieldset>
+          <p class="admin-feedback" id="import-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="admin-section" id="invitations" aria-labelledby="invitations-title">
+        <div class="admin-section-heading">
+          <div><p class="puebla-kicker">03 / Acceso al stand</p><h2 id="invitations-title">Invitaciones</h2></div>
+        </div>
+        <div class="admin-columns">
+          <form class="puebla-panel admin-card" id="generate-form">
+            <h3>Generar PIN individuales</h3>
+            <p class="admin-help">Guarda el lote al generarlo. Cada PIN permite obtener una licencia y recuperar esa misma asignación.</p>
+            <fieldset class="admin-form">
+              <label for="invitation-count">Cantidad por lote
+                <input class="puebla-input" id="invitation-count" type="number" inputmode="numeric" value="20" min="1" max="200" step="1" required>
+              </label>
+              <div><button class="puebla-button puebla-button--primary" type="submit">Generar PIN</button></div>
+            </fieldset>
+            <p class="admin-feedback" id="generate-feedback" role="status" aria-live="polite"></p>
+          </form>
+          <form class="puebla-panel admin-card" id="revoke-form">
+            <h3>Revocar invitación</h3>
+            <p class="admin-help" id="revoke-help">Selecciona una invitación de la lista o usa el identificador de la exportación. Solo se pueden revocar invitaciones pendientes.</p>
+            <fieldset class="admin-form">
+              <label for="invitation-id">Identificador de la invitación
+                <input class="puebla-input" id="invitation-id" type="text" autocomplete="off" spellcheck="false" maxlength="36" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" aria-describedby="revoke-help" required>
+              </label>
+              <div><button class="puebla-button" type="submit">Revocar invitación pendiente</button></div>
+            </fieldset>
+            <p class="admin-feedback" id="revoke-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="puebla-panel admin-card admin-export" id="invite-export" hidden>
+          <div><h3 id="invite-export-title">Lote recién generado</h3><p class="admin-help">Entrega una tarjeta por visitante y conserva el archivo en un lugar privado.</p></div>
+          <div class="admin-toolbar">
+            <button class="puebla-button puebla-button--primary" id="export-invitations" type="button">Descargar PIN en CSV</button>
+            <button class="puebla-button" id="print-invitations" type="button">Imprimir tarjetas</button>
+            <button class="puebla-button" id="hide-invitations" type="button">Cerrar lote</button>
+          </div>
+        </div>
+        <div class="puebla-panel admin-card">
+          <div class="admin-section-heading">
+            <h3>Invitaciones pendientes</h3>
+            <button class="puebla-button" id="reload-invitations" type="button">Actualizar lista</button>
+          </div>
+          <p class="admin-feedback" id="invitations-feedback" role="status" aria-live="polite"></p>
+          <div class="admin-table-wrap" id="invitations-wrap" hidden>
+            <table class="admin-table">
+              <caption class="admin-sr-only">Invitaciones pendientes de uso</caption>
+              <thead><tr><th scope="col">Identificador</th><th scope="col">Fecha de creación</th><th scope="col">Acción</th></tr></thead>
+              <tbody id="invitations-body"></tbody>
+            </table>
+          </div>
+          <button class="puebla-button" id="more-invitations" type="button" hidden>Cargar más invitaciones</button>
+        </div>
+      </section>
+
+      <section class="admin-section" id="campaign" aria-labelledby="campaign-title">
+        <div class="admin-section-heading">
+          <div><p class="puebla-kicker">04 / Disponibilidad</p><h2 id="campaign-title">Controles de campaña</h2></div>
+        </div>
+        <form class="puebla-panel admin-card" id="campaign-form">
+          <h3>Programación y límites</h3>
+          <p class="admin-help" id="schedule-help">Las fechas usan la hora de Puebla (America/Mexico_City). La hora de cierre es el primer momento en que ya no se pueden entregar licencias.</p>
+          <fieldset class="admin-form">
+            <div class="admin-form-row">
+              <label for="campaign-start">Inicio
+                <input class="puebla-input" id="campaign-start" type="datetime-local" aria-describedby="schedule-help" required>
+              </label>
+              <label for="campaign-end">Cierre
+                <input class="puebla-input" id="campaign-end" type="datetime-local" aria-describedby="schedule-help" required>
+              </label>
+            </div>
+            <div class="admin-form-row admin-limit-row">
+              <label for="campaign-limit">Límite total de entregas
+                <input class="puebla-input" id="campaign-limit" type="number" inputmode="numeric" min="0" max="1000000" step="1" placeholder="Sin límite">
+              </label>
+              <label for="android-limit">Límite Android
+                <input class="puebla-input" id="android-limit" type="number" inputmode="numeric" min="0" max="1000000" step="1" placeholder="Sin límite">
+              </label>
+              <label for="ios-limit">Límite iOS
+                <input class="puebla-input" id="ios-limit" type="number" inputmode="numeric" min="0" max="1000000" step="1" placeholder="Sin límite">
+              </label>
+            </div>
+            <div class="admin-switches">
+              <label><input id="campaign-enabled" type="checkbox"> Promoción habilitada</label>
+              <label><input id="campaign-android" type="checkbox"> Android habilitado</label>
+              <label><input id="campaign-ios" type="checkbox"> iOS habilitado</label>
+            </div>
+            <div><button class="puebla-button puebla-button--primary" type="submit">Guardar campaña</button></div>
+          </fieldset>
+          <p class="admin-feedback" id="campaign-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="admin-section" id="activity" aria-labelledby="activity-title">
+        <div class="admin-section-heading">
+          <div><p class="puebla-kicker">05 / Trazabilidad</p><h2 id="activity-title">Actividad</h2></div>
+          <button class="puebla-button" id="reload-logs" type="button">Actualizar actividad</button>
+        </div>
+        <div class="puebla-panel admin-card">
+          <h3>Registros de la campaña</h3>
+          <p class="admin-feedback" id="logs-feedback" role="status" aria-live="polite"></p>
+          <div class="admin-table-wrap" id="logs-wrap" hidden>
+            <table class="admin-table">
+              <caption class="admin-sr-only">Registro de actividad administrativa y entregas</caption>
+              <thead><tr><th scope="col">Fecha</th><th scope="col">Acción</th><th scope="col">Plataforma</th><th scope="col">Referencia</th></tr></thead>
+              <tbody id="logs-body"></tbody>
+            </table>
+          </div>
+          <button class="puebla-button" id="more-logs" type="button" hidden>Cargar más registros</button>
+        </div>
+        <form class="puebla-panel admin-card" id="redemption-form">
+          <h3>Confirmar canje en la tienda</h3>
+          <p class="admin-help" id="redemption-help">Usa la referencia del código en el registro de entrega. Confirma el canje solo cuando lo hayas verificado.</p>
+          <fieldset class="admin-form">
+            <label for="redemption-id">Referencia del código entregado
+              <input class="puebla-input" id="redemption-id" type="text" autocomplete="off" spellcheck="false" maxlength="36" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" aria-describedby="redemption-help" required>
+            </label>
+            <label class="admin-check"><input id="redemption-confirmed" type="checkbox" required> He verificado que la licencia fue canjeada en la tienda.</label>
+            <div><button class="puebla-button" type="submit">Registrar canje verificado</button></div>
+          </fieldset>
+          <p class="admin-feedback" id="redemption-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="admin-shell admin-footer"><span>EPICENTERDSP</span><span>InnovaTecNM Nacional 2026 · Puebla, México</span></footer>
+  <section id="print-sheet" aria-label="Tarjetas de invitación" hidden></section>
+</body>
+</html>

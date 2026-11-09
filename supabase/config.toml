@@ -1,0 +1,10 @@
+project_id = "epicenter-puebla2026"
+
+[auth]
+enable_signup = false
+
+[functions.puebla-public]
+verify_jwt = false
+
+[functions.puebla-admin]
+verify_jwt = false
